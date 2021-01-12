@@ -21,7 +21,7 @@ mongoose.connect(
 );
 
 // Use apiRoutes
-app.use("/api", apiRoutes);
+// app.use("/api", apiRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs

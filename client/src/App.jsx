@@ -2,6 +2,7 @@
 import './App.css';
 import React from 'react';
 import Navbar from './components/Navbar/navbar';
+import SignupForm from './components/SignUpForm/Form';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SignupForm from './components/SignUpForm/Form';
 // import Stock from './pages/Stock';

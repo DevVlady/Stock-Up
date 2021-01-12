@@ -3,19 +3,15 @@ import './navbar.css';
 
 function Navbar() {
     return (
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                </Form>
-            </Navbar>
-    )
+        <nav className="navbar navbar-light bg-light">
+            <div className="container-fluid">
+                <a className="navbar-brand" href="/">Navbar</a>
+                <form className="d-flex">
+                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>    )
 }
 
 export default Navbar;

@@ -1,5 +1,5 @@
 import React from 'react';
-import SignupForm from './components/SignUpForm/Form';
+import SignupForm from '../components/SignUpForm';
 
 
 function Signup() {
@@ -7,7 +7,7 @@ function Signup() {
 
     return (
         <SignupForm>
-            
+
         </SignupForm>
     )
 }

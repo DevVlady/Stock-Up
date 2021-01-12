@@ -1,0 +1,27 @@
+{
+  "name": "Stock-Up",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vlady14/Stock-Up.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vlady14/Stock-Up/issues"
+  },
+  "homepage": "https://github.com/Vlady14/Stock-Up#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.11"
+  }
+}

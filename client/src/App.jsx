@@ -7,7 +7,6 @@ import Login from './pages/Login';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NoMatch from './pages/NoMatch';
-import SignupForm from './components/SignUpForm/Form';
 // import Stock from './pages/Stock';
 
 function App() {

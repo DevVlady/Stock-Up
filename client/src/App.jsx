@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Navbar from './components/Navbar/navbar';
-import SignupForm from './components/SignUpForm/Form';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Signup from './pages/SignUp';
+import SignupForm from './components/SignUpForm/Form';
 // import Stock from './pages/Stock';
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
   return (
       <Router basename={`${BASE_NAME}`}>
         <div>
-          <Navbar/>
+          <Route exact path={["/", "/signup"]}>
+            <Signup />
+          </Route>
           <SignupForm/>
         </div>
       </Router>

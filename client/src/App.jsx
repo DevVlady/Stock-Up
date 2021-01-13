@@ -24,6 +24,14 @@ class App extends Component {
     this.updateUser = this.updateUser.bind(this)
   }
 
+  componentDidMount() {
+    this.getUser()
+  }
+
+  updateUser (userObject) {
+    this.setState(userObject)
+  }
+
   render() {
     return (
       // <Router basename={`${BASE_NAME}`}>

@@ -14,12 +14,12 @@ const SignupForm = () => {
                                 <input type="email" className="form-control" id="email-input" placeholder="Email" />
                             </div>
                             <div className="form-group">
-                                <label for="username-input">User name</label>
-                                <input type="username" className="form-control" id="username-input" placeholder="Username" />
+                                <label for="firstName-input">First Name</label>
+                                <input type="firstName" className="form-control" id="firstName-input" placeholder="First Name" />
                             </div>
                             <div className="form-group">
-                                <label for="password-input">Password</label>
-                                <input type="password" className="form-control" id="password-input" placeholder="Password" />
+                                <label for="lastName-input">Last Name</label>
+                                <input type="lastName" className="form-control" id="lastName-input" placeholder="Last Name" />
                             </div>
                             <div id="alert" className="alert alert-danger display2" role="alert">
                                 <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>

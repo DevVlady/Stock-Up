@@ -94,6 +94,10 @@ class LoginForm extends Component {
                                 onClick={this.handleSubmit}
                                 type="submit">Login</button>
                         </div>
+                        <div className="form-group ">
+                            <div className="col-7"></div>
+                            <a href="/signup">Sign Up</a>
+                        </div>
                     </form>
                 </div>
             )

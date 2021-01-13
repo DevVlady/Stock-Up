@@ -21,6 +21,10 @@ const SignupForm = () => {
                                 <label for="lastName-input">Last Name</label>
                                 <input type="lastName" className="form-control" id="lastName-input" placeholder="Last Name" />
                             </div>
+                            <div className="form-group">
+                                <label for="lastName-input">Password</label>
+                                <input type="password" className="form-control" id="password" placeholder="Password" />
+                            </div>
                             <div id="alert" className="alert alert-danger display2" role="alert">
                                 <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                 <span className="sr-only">Error:</span> <span className="msg"></span>

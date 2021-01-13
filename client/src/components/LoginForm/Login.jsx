@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
 
-const SignupForm = () => {
+const LoginForm = () => {
     return (
         <div className="container">
             <div className="row">
@@ -30,4 +30,4 @@ const SignupForm = () => {
     );
 }
 
-export default SignupForm;
+export default LoginForm;

@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NoMatch from './pages/NoMatch';
+import Wrapper from './components/Wrapper/Wrapper';
 // import Navbar from "./components/Navbar/navbar"
 
 function App() {
@@ -15,12 +16,14 @@ function App() {
     <Router>
       <div>
         {/* <Navbar/> */}
-        <Route exact path="/" component={Welcome} />
-        <Route exact path="/welcome" component={Welcome} />
-        <Route exact path="/signup" component={Signup} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/nomatch" component={NoMatch} />
+        <Wrapper>
+          <Route exact path="/" component={Welcome} />
+          <Route exact path="/welcome" component={Welcome} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/nomatch" component={NoMatch} />
+        </Wrapper>
       </div>
     </Router>
   );

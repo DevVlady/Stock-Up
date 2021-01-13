@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
@@ -8,14 +7,13 @@ import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NoMatch from './pages/NoMatch';
 import Wrapper from './components/Wrapper/Wrapper';
-// import Navbar from "./components/Navbar/navbar"
 
 function App() {
-  // const BASE_NAME = "/Stock-Up"
+  const BASE_NAME = "/Stock-Up";
+
   return (
-    <Router>
+    <Router basename={`${BASE_NAME}`}>
       <div>
-        {/* <Navbar/> */}
         <Wrapper>
           <Route exact path="/" component={Welcome} />
           <Route exact path="/Stock-up" component={Welcome} />

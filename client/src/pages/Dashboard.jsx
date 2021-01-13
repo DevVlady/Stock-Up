@@ -1,4 +1,6 @@
-import API from '../utils/API';
+import React from 'react';
+// import API from '../utils/API';
+import Navbar from '../components/Navbar/navbar';
 import StockContext from '../utils/stockContext';
 
 function Stock() {
@@ -6,7 +8,7 @@ function Stock() {
 
     return (
         <StockContext.Provider>
-
+            <Navbar/>
         </StockContext.Provider>
     )
 }

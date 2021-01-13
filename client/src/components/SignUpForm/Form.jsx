@@ -21,7 +21,6 @@ const SignupForm = () => {
                                 <label for="password-input">Password</label>
                                 <input type="password" className="form-control" id="password-input" placeholder="Password" />
                             </div>
-                            
                             <div id="alert" className="alert alert-danger display2" role="alert">
                                 <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                                 <span className="sr-only">Error:</span> <span className="msg"></span>
@@ -29,7 +28,6 @@ const SignupForm = () => {
                             <button type="submit" id="submitBtn" className="btn btn-default">Sign Up</button>
                             OR
                             <button type="submit" className="btn btn-default"><a href="/login/github">Use GitHub</a></button>
-
                         </form>
                         <br />
                         <p>Or log in <a href="/login">here</a></p>

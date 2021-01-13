@@ -45,7 +45,7 @@ class SignupForm extends Component {
 
             })
     }
-    
+
     render() {
         return (
             <div className="SignupForm">
@@ -88,6 +88,10 @@ class SignupForm extends Component {
                             type="submit"
                         >Sign up</button>
                     </div>
+                    <div className="form-group ">
+                            <div className="col-7"></div>
+                            <a href="/login">Login</a>
+                        </div>
                 </form>
             </div>
         )

@@ -2,33 +2,18 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
-const LoginForm = () => {
-    return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6 col-md-offset-3">
-                    <h2>Login Form</h2>
-                    <form className="login">
-                        <div className="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" className="form-control" id="email-input" placeholder="Email"/>
-                        </div>
-                        <div className="form-group">
-                            <label for="exampleInputUsername1">Github Username</label>
-                            <input type="text" className="form-control" id="username-input" placeholder="Username"/>
-                        </div>
-                        <div className="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" className="form-control" id="password-input" placeholder="Password"/>
-                        </div>
-                        <button type="submit" className="btn btn-default loginBtn">Login</button>
-                    </form>
-                    <br />
-                    <p>Or sign up <a href="/signup">here</a></p>
-                </div>
-            </div>
-        </div>
-    );
+class LoginForm extends Component {
+    constructor() {
+        super()
+        this.state = {
+            username: '',
+            password: '',
+            redirectTo: null
+        }
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+
+    }
 }
 
 export default LoginForm;

@@ -15,7 +15,8 @@
     "react-hanger": "^2.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "reactstrap": "^8.8.1"
+    "reactstrap": "^8.8.1",
+    "spectre.css": "^0.5.9"
   },
   "scripts": {
     "predeploy": "npm run build",

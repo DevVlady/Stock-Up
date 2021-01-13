@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+//Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'spectre.css/dist/spectre.min.css';
+import 'spectre.css/dist/spectre-icons.css';
 
 ReactDOM.render(
   <React.StrictMode>

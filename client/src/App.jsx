@@ -1,6 +1,8 @@
 import './App.css';
-import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import axios from 'axios'
+import React, { Component } from 'react';
+// import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { Route, Link } from 'react-router-dom'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
@@ -8,11 +10,11 @@ import Dashboard from './pages/Dashboard';
 import NoMatch from './pages/NoMatch';
 import Wrapper from './components/Wrapper/Wrapper';
 
-function App() {
-  const BASE_NAME = "/Stock-Up";
+class App extends Component {
+  // const BASE_NAME = "/Stock-Up";
 
   return (
-    <Router basename={`${BASE_NAME}`}>
+    // <Router basename={`${BASE_NAME}`}>
       <div>
         <Wrapper>
           <Route exact path="/" component={Welcome} />
@@ -24,7 +26,7 @@ function App() {
           <Route exact path="/nomatch" component={NoMatch} />
         </Wrapper>
       </div>
-    </Router>
+    // </Router>
   );
 }
 

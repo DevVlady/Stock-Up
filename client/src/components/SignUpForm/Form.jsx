@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Form.css';
+import axios from 'axios';
 
 const SignupForm = () => {
     return (

@@ -18,14 +18,14 @@ const userSchema = new Schema(
             trim: true,
             required: 'Last name field is required'
         },
+        password: {
+            type: String,
+            required: true
+        },
         date: {
             type: Date,
             default: Date.now
         }
-//   title: { type: String, required: true },
-//   author: { type: String, required: true },
-//   synopsis: String,
-//   date: { type: Date, default: Date.now }
     }
 );
 

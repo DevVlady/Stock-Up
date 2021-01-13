@@ -1,15 +1,15 @@
 import React from 'react';
-import SignupForm from '../components/SignUpForm/Form';
+import WelcomePg from '../components/Welcome/Welcome';
 
 
-function Signup() {
+function Welcome() {
 
 
     return (
-        <SignupForm>
+        <WelcomePg>
 
-        </SignupForm>
+        </WelcomePg>
     )
 }
 
-export default Signup;
+export default Welcome;

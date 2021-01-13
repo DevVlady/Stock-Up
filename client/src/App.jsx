@@ -18,6 +18,7 @@ function App() {
         {/* <Navbar/> */}
         <Wrapper>
           <Route exact path="/" component={Welcome} />
+          <Route exact path="/Stock-up" component={Welcome} />
           <Route exact path="/welcome" component={Welcome} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />

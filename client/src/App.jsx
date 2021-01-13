@@ -12,22 +12,36 @@ import Wrapper from './components/Wrapper/Wrapper';
 
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
+  constructor() {
+    super()
+    this.state = {
+      loggedIn: false,
+      username: null
+    }
 
-  return (
-    // <Router basename={`${BASE_NAME}`}>
-      <div>
-        <Wrapper>
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/Stock-up" component={Welcome} />
-          <Route exact path="/welcome" component={Welcome} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/nomatch" component={NoMatch} />
-        </Wrapper>
-      </div>
-    // </Router>
-  );
+    this.getUser = this.getUser.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
+    this.updateUser = this.updateUser.bind(this)
+  }
+
+  render() {
+    return (
+      // <Router basename={`${BASE_NAME}`}>
+        <div>
+          <Wrapper>
+            <Route exact path="/" component={Welcome} />
+            <Route exact path="/Stock-up" component={Welcome} />
+            <Route exact path="/welcome" component={Welcome} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/nomatch" component={NoMatch} />
+          </Wrapper>
+        </div>
+      // </Router>
+    );
+
+  }
 }
 
 export default App;

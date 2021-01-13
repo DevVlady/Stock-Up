@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios'
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import { Route, Link } from 'react-router-dom'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
@@ -62,13 +62,14 @@ class App extends Component {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/Stock-up" component={Welcome} />
             <Route exact path="/welcome" component={Welcome} />
+            <Route exact path="/signup" render={() =>
+              <Signup />}
+            />
+            <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/login" render={() =>
               <Login
                 updateUser={this.updateUser}
               />}
-            />
-            <Route exact path="/signup" render={() =>
-              <Signup />}
             />
             <Route exact path="/nomatch" component={NoMatch} />
           </Wrapper>

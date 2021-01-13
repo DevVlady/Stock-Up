@@ -33,7 +33,7 @@ class SignupForm extends Component {
                 console.log(response)
                 if (!response.data.errmsg) {
                     console.log('successful signup')
-                    this.setState({ //redirect to login page
+                    this.setState({ //redirect to dashboard page
                         redirectTo: '/dashboard'
                     })
                 } else {

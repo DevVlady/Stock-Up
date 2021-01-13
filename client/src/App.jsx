@@ -1,8 +1,8 @@
 import './App.css';
 import axios from 'axios'
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+// import { Route, Link } from 'react-router-dom'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
@@ -55,7 +55,8 @@ class App extends Component {
 
   render() {
     return (
-      // <Router basename={`${BASE_NAME}`}>
+      //basename={`${BASE_NAME}`}
+      <Router>
         <div>
           <Wrapper>
             <Route exact path="/" component={Welcome} />
@@ -67,7 +68,7 @@ class App extends Component {
             <Route exact path="/nomatch" component={NoMatch} />
           </Wrapper>
         </div>
-      // </Router>
+      </Router>
     );
 
   }

@@ -11,7 +11,9 @@ function Navbar() {
                         <button className="btn btn-outline-primary" type="submit">Search</button>
                 </form>
             </div>
-        </nav>    )
+        </nav>
+        
+    )
 }
 
 export default Navbar;

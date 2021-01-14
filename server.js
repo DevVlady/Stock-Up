@@ -38,7 +38,9 @@ app.use(
 		store: new MongoStore({ mongooseConnection: dbConnection }),
 		resave: false, //required
 		saveUninitialized: false //required
-	})
+	},
+	{ useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+	)
 )
 
 // Passport
@@ -53,10 +55,10 @@ app.use('/user', user)
 
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
-  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
+//   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+// );
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

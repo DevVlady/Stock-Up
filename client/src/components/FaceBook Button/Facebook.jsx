@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FacebookLogin from 'react-facebook-login';
 
-class Facebook extends Component {
+export default class Facebook extends Component {
     state= {
         isLoggedIn: false,
         userId:'',
@@ -10,9 +10,8 @@ class Facebook extends Component {
         picutre:''
     }
     
-    constructor(props) {
-        super(props);
-        this.state = {  }
+    responseFacebook = response => {
+        console.log(response);
     }
 
     componentClicked = () => console.log("clicked")
@@ -21,7 +20,7 @@ class Facebook extends Component {
         let fbContent;
 
         if(this.state.isLoggedIn) {
-            
+            fbContent = null;
         } else { 
             fbContent=(<FacebookLogin
                 appId="2779128549065613"
@@ -29,17 +28,12 @@ class Facebook extends Component {
                 fields="name,email,picture"
                 onClick={this.componentClicked}
                 callback={this.responseFacebook} />)
+        
+
+        return ( 
+        <div>
+            {fbContent}
+        </div> );
         }
-
-
-
-
-        return (  );
     }
 }
- 
-export default Facebook; = () => {
-    return (  );
-}
- 
-export default ;

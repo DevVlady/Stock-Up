@@ -41,7 +41,7 @@ router.post(
         console.log(req.body)
         next()
     },
-    passport.authenticate('local'),
+    passport.authenticate('local', {successRedirect: '/dashboard', failureRedirect: '/'}),
     (req, res) => {
         console.log('logged in', req.user);
         var userInfo = {

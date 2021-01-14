@@ -10,8 +10,7 @@ import Dashboard from './pages/Dashboard';
 import NoMatch from './pages/NoMatch';
 import Wrapper from './components/Wrapper/Wrapper';
 // import FacebookLogin from 'react-facebook-login';
-import { Card, Image } from 'react-bootstrap';
-import Facebook from './components/FaceBook Button/Facebook';
+// import { Card, Image } from 'react-bootstrap';
 
 
 

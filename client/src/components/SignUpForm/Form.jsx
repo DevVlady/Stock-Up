@@ -36,7 +36,7 @@ class SignupForm extends Component {
                 if (!response.data.errmsg) {
                     console.log('successful signup')
                     this.setState({ //redirect to login page
-                        redirectTo: '/dashboard'
+                        redirectTo: '/login'
                     })
                 } else {
                     console.log('username already taken')
@@ -99,7 +99,7 @@ class SignupForm extends Component {
 
 
                     {/* <div className="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div> */}
-                    
+
 
                 </form>
             </div>

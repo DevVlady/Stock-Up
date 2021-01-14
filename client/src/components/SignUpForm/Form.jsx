@@ -94,11 +94,11 @@ class SignupForm extends Component {
                             <div className="col-7"></div>
                             <a href="/login">Login</a>
                     </div>
-                    <Facebook/>
+                    {/* <Facebook/> */}
 
 
 
-                    {/* <div className="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div> */}
+                    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div>
                     
 
                 </form>

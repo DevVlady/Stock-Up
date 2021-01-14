@@ -8,7 +8,7 @@ const user = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./database')
-// const FacebookStrategy = require("passport-facebook").Strategy;
+const FacebookStrategy = require("passport-facebook").Strategy;
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -44,29 +44,31 @@ app.use(
 
 // Passport
 app.use(passport.initialize())
-app.use(passport.session()) // calls the deserializeUser
+app.use(passport.session())
+// app.use(session({secret:"thisissecretkey"})) // calls the deserializeUser
 
-// passport.use(new FacebookStrategy({
-// 	clientID: process.env.CLIENT_ID_FB,
-// 	clientSecret: process.env.CLIENT_SECRET_FB,
-// 	callbackURL: "http://localhost:3000/auth/facebook/secrets"
-// },
-// 	function (accessToken, refreshToken, profile, cb) {
-// 		User.findOrCreate({ facebookId: profile.id }, function (err, user) {
-// 			return cb(err, user);
-// 		});
-// 	}
-// ));
+passport.use(new FacebookStrategy({
+	clientID: process.env.CLIENT_ID_FB,
+	clientSecret: process.env.CLIENT_SECRET_FB,
+	callbackURL: "http://localhost:3000/auth/facebook/secrets",
+	profileFields: ['id', 'displayName', 'name', 'picture.type(large)','email']
+},
+	function (accessToken, refreshToken, profile, cb) {
+		User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+			return cb(err, user);
+		});
+	}
+));
 
-// app.get('/auth/facebook',
-//   passport.authenticate('facebook'));
+app.get('/auth/facebook',
+  passport.authenticate('facebook'));
 
-// app.get('/auth/facebook/callback',
-//   passport.authenticate('facebook', { failureRedirect: '/login' }),
-//   function(req, res) {
-//     // Successful authentication, redirect home.
-//     res.redirect('/welcome');
-//   });
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/welcome');
+  });
 
 // Routes
 app.use('/user', user)

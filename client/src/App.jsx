@@ -1,13 +1,8 @@
 import './App.css';
-<<<<<<< HEAD
-import React, {useState} from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-=======
 import axios from 'axios'
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 // import { Route, Link } from 'react-router-dom'
->>>>>>> d168eb295f7a2b8e7bab81fa9cec6337e543c14a
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
@@ -19,40 +14,6 @@ import { Card, Image } from 'react-bootstrap';
 
 
 
-<<<<<<< HEAD
-function App() {
-  const BASE_NAME = "/Stock-Up";
-  const [login, setLogin] = useState(false);
-  const [data, setData] = useState({});
-  const [picture, setPicture] = useState('');
-
-  const responseFacebook = (response) => {
-    console.log(response);
-    setData(response);
-    setPicture(response.picture.data.url);
-    if (response.accessToken) {
-      setLogin(true);
-    } else {
-      setLogin(false);
-    }
-  }
-  
-  return (
-    <Router basename={`${BASE_NAME}`}>
-      <div>
-        <Wrapper>
-          <Route exact path="/" component={Welcome} />
-          <Route exact path="/Stock-up" component={Welcome} />
-          <Route exact path="/welcome" component={Welcome} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/nomatch" component={NoMatch} />
-        </Wrapper>
-      </div>
-    </Router>
-  );
-=======
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
   constructor() {
@@ -120,7 +81,6 @@ class App extends Component {
       </Router>
     );
   }
->>>>>>> d168eb295f7a2b8e7bab81fa9cec6337e543c14a
 }
 
 export default App;

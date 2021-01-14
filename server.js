@@ -8,6 +8,7 @@ const user = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./database')
+const FacebookStrategy = require("passport-facebook").Strategy
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -18,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+	app.use(express.static("client/build"));
 }
 
 //Middleware
@@ -45,6 +46,18 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session()) // calls the deserializeUser
 
+passport.use(new FacebookStrategy({
+	clientID: FACEBOOK_APP_ID,
+	clientSecret: FACEBOOK_APP_SECRET,
+	callbackURL: "http://localhost:3000/auth/facebook/callback"
+},
+	function (accessToken, refreshToken, profile, cb) {
+		User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+			return cb(err, user);
+		});
+	}
+));
+
 // Routes
 app.use('/user', user)
 
@@ -54,10 +67,10 @@ app.use('/user', user)
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
-  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+	process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
+	{ useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+app.listen(PORT, function () {
+	console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

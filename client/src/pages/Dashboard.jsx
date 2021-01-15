@@ -6,6 +6,7 @@ import StockContext from '../utils/stockContext';
  import Button from 'react-bootstrap/Button';
  import Jumbotron from 'react-bootstrap/Jumbotron';
  import Footer from "../components/Footer/footer";
+ import Sidebar from '../components/Sidebar/Sidebar';
 
 function Stock() {
 
@@ -14,6 +15,7 @@ function Stock() {
         <StockContext.Provider>
 
             <Navbar />
+            <Sidebar/>
             <Jumbotron>
                 <h1>Hello, world!</h1>
                 <p>

@@ -12,7 +12,7 @@ function Welcome() {
             <h4 id="slogan">For Programmers, By Programmers</h4>
             <h5 id="submit-message">Click continue button below to begin</h5>
 
-            <a href='/signup'><button id="continue-button" class="btn btn-primary">Continue</button></a>
+            <a href='/signup'><button id="continue-button" class="btn btn-primary">Signup</button></a>
 
         </div>
 

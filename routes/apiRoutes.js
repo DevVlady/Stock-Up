@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const path = require('path');
+// const { Redirect } = require("react-router");
 // const apiRoutes = require("./api");
 // const express = require('express');
 const User = require('../database/models/user');

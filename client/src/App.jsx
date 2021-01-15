@@ -74,7 +74,7 @@ class App extends Component {
                 updateUser={this.updateUser}
               />}
             />
-            <Route exact path="/logout" component={Signout}/>
+            {/* <Route exact path="/logout" component={Signout}/> */}
             <Route exact path="/nomatch" component={NoMatch} />
           </Wrapper>
         </div>

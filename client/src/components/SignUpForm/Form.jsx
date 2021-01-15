@@ -74,7 +74,7 @@ class SignupForm extends Component {
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="email" className="mr-sm-2">Email</Label>
-                    <Input type="email" name="email" id="email" placeholder="email@example.com" />
+                    <Input type="email" name="email" id="email" placeholder="email@example.com" value={this.state.email} onChange={this.handleChange}/>
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="Password" className="mr-sm-2">Password</Label>

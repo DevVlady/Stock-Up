@@ -13,21 +13,21 @@ const userSchema = new Schema(
             unique: false,
             required: false
         },
-        // email: {
-        //     type: String,
-        //     trim: true,
-        //     required: 'Email field is required'
-        // },
+        email: {
+            type: String,
+            unique: false,
+            required: false
+        },
         firstName: {
             type: String,
             unique: false,
             required: false
         },
-        // lastName: {
-        //     type: String,
-        //     trim: true,
-        //     required: 'Last name field is required'
-        // },
+        lastName: {
+            type: String,
+            unique: false,
+            required: false
+        },
         password: {
             type: String,
             unique: false,

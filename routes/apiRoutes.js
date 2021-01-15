@@ -70,6 +70,7 @@ router.get('/', (req, res) => {
 router.get('/logout', (req, res) => {
     console.log('**Signing Out**')
     if (req.user) {
+        res.redirect('/login')
         req.logout()
         res.json({ msg: 'user signout'})
     } else {

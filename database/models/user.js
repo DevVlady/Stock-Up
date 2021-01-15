@@ -13,30 +13,30 @@ const userSchema = new Schema(
             unique: false,
             required: false
         },
-        email: {
-            type: String,
-            trim: true,
-            required: 'Email field is required'
-        },
+        // email: {
+        //     type: String,
+        //     trim: true,
+        //     required: 'Email field is required'
+        // },
         firstName: {
             type: String,
-            trim: true,
-            required: 'First name field is required'
+            unique: false,
+            required: false
         },
-        lastName: {
-            type: String,
-            trim: true,
-            required: 'Last name field is required'
-        },
+        // lastName: {
+        //     type: String,
+        //     trim: true,
+        //     required: 'Last name field is required'
+        // },
         password: {
             type: String,
             unique: false,
             required: false
         },
-        // date: {
-        //     type: Date,
-        //     default: Date.now
-        // }
+        date: {
+            type: Date,
+            default: Date.now
+        }
     }
 );
 

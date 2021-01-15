@@ -9,6 +9,7 @@ mongoose.connect(
 const userSeed = [
     {
         email: 'mikeb@gmail.com',
+        username: 'mik2',
         firstName: 'Mike',
         lastName: 'B',
         password: '123',
@@ -16,6 +17,7 @@ const userSeed = [
     },
     {
         email: 'vv@gmail.com',
+        username: 'mik2',
         firstName: 'Vlad',
         lastName: 'D',
         password: '123',
@@ -23,6 +25,7 @@ const userSeed = [
     },
     {
         email: 'josh@gmail.com',
+        username: 'mik2',
         firstName: 'Josh',
         lastName: 'B',
         password: '123',
@@ -30,6 +33,7 @@ const userSeed = [
     },
     {
         email: 'jk@gmail.com',
+        username: 'mik2',
         firstName: 'Jason',
         lastName: 'B',
         password: '123',
@@ -37,6 +41,7 @@ const userSeed = [
     },
     {
         email: 'lk@gmail.com',
+        username: 'mik2',
         firstName: 'Luke',
         lastName: 'B',
         password: '123',
@@ -44,6 +49,7 @@ const userSeed = [
     },
     {
         email: 'ha@gmail.com',
+        username: 'mik2',
         firstName: 'Trump',
         lastName: 'D',
         password: '123',

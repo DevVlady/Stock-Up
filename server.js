@@ -34,6 +34,7 @@ app.use(morgan('dev'))
 
 // Sessions
 app.use(
+	process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
 	session({
 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
 		store: new MongoStore({ mongooseConnection: dbConnection }),

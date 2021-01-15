@@ -1,12 +1,12 @@
-import React from 'react';
-import { Button } from 'reactstrap';
+// import React from 'react';
+// import { Button } from 'reactstrap';
 
-const Example = (props) => {
-    return (
-        <div>
-            <Button color="primary">primary</Button>{' '}
-        </div>
-    );
-}
+// const Example = (props) => {
+//     return (
+//         <div>
+//             <Button color="primary">primary</Button>{''}
+//         </div>
+//     );
+// }
 
-export default Example;
+// export default Example;

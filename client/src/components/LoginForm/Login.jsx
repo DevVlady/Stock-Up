@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './Login.css';
 
 class LoginForm extends Component {
     constructor() {
@@ -69,7 +70,7 @@ class LoginForm extends Component {
                     </FormGroup> */}
                     <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                         <Label for="Username" className="mr-sm-2">Username</Label>
-                        <Input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
+                        <Input type="text" name="username" id="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
                     </FormGroup>
                     {/* <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                         <Label for="email" className="mr-sm-2">Email</Label>
@@ -77,7 +78,7 @@ class LoginForm extends Component {
                     </FormGroup> */}
                     <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                         <Label for="Password" className="mr-sm-2">Password</Label>
-                        <Input type="password" name="password" id="Password" value={this.state.password} onChange={this.handleChange} />
+                        <Input type="password" name="password" id="Password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                     </FormGroup>
                     <Button onClick={this.handleSubmit}>Submit</Button>
                     <a href="/signup">Signup</a>

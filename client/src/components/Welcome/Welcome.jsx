@@ -12,7 +12,7 @@ const Welcome = (props) => {
         <hr className="my-2" />
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <p className="lead">
-            <a href="/signup"><Button color="primary">Sign Up</Button></a>
+          <a href="/signup"><Button color="primary">Sign Up</Button></a>
         </p>
       </Jumbotron>
     </div>

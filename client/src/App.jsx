@@ -14,7 +14,6 @@ import Wrapper from './components/Wrapper/Wrapper';
 // import { Card, Image } from 'react-bootstrap';
 
 
-
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
   constructor() {
@@ -25,7 +24,7 @@ class App extends Component {
       lastName: null,
       firstName: null,
       email: null,
-
+      sessionToken: '',
     }
 
     this.getUser = this.getUser.bind(this)

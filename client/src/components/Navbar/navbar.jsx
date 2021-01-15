@@ -33,7 +33,7 @@ const Navbar = (props) => {
                     <NavLink href="#">Another Link</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink disabled href="#">Signout</NavLink>
+                    <NavLink>Logout</NavLink>
                 </NavItem>
             </Nav>
         </div>

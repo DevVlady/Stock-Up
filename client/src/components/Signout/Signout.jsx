@@ -10,3 +10,10 @@
 // }
 
 // export default Example;
+
+// logout = () => {
+//     this.setState({
+//       sessionToken: '',
+//     });
+//     localStorage.clear();
+//   }

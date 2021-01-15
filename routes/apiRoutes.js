@@ -12,7 +12,7 @@ const { redirect } = require("../passport/localStrategy");
 router.post('/signup', (req, res) => {
     console.log('user signup');
 
-    const { username, password, firstName,  } = req.body
+    const { username, password, firstName, lastName, email } = req.body
     // ADD VALIDATION
     User.findOne({ username: username }, (err, user) => {
         if (err) {
@@ -27,6 +27,8 @@ router.post('/signup', (req, res) => {
                 username: username,
                 password: password,
                 firstName: firstName,
+                lastName: lastName,
+                email: email
             })
             newUser.save((err, savedUser) => {
                 if (err) return res.json(err)

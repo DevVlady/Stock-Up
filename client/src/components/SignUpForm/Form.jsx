@@ -56,13 +56,24 @@ class SignupForm extends Component {
             // <h4>Sign up</h4>
             <Form inline>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="exampleEmail" className="mr-sm-2">Email</Label>
-                    <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" />
+                    <Label for="First Name" className="mr-sm-2">First Name</Label>
+                    <Input type="firstName" name="firstName" id="First Name"/>
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="examplePassword" className="mr-sm-2">Password</Label>
-                    <Input type="password" name="password" id="examplePassword" placeholder="don't tell!" value={this.state.password}
-                                onChange={this.handleChange} />
+                    <Label for="Last Name" className="mr-sm-2">Last Name</Label>
+                    <Input type="lastName" name="lastName" id="Last Name"/>
+                </FormGroup>
+                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="Username" className="mr-sm-2">Username</Label>
+                    <Input type="username" name="username" id="Username"/>
+                </FormGroup>
+                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="exampleEmail" className="mr-sm-2">Email</Label>
+                    <Input type="email" name="email" id="exampleEmail" placeholder="email@example.com"/>
+                </FormGroup>
+                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="Password" className="mr-sm-2">Password</Label>
+                    <Input type="password" name="password" id="Password" value={this.state.password} onChange={this.handleChange} />
                 </FormGroup>
                 <Button onClick={this.handleSubmit}>Submit</Button>
             </Form>

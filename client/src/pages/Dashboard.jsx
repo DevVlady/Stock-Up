@@ -2,7 +2,7 @@ import React from 'react';
 // import API from '../utils/API';
 import Navbar from '../components/Navbar/navbar';
 import StockContext from '../utils/stockContext';
-// import Signout from '../components/Signout/Signout';
+// import Logout from '../components/Logout/Logout';
 import Jumbotron from '../components/Dashboard/dashboard'
 
 function Stock() {
@@ -12,7 +12,7 @@ function Stock() {
         <StockContext.Provider>
             <Navbar/>
             <Jumbotron/>
-            {/* <Signout/> */}
+            {/* <Logout/> */}
         </StockContext.Provider>
     )
 }

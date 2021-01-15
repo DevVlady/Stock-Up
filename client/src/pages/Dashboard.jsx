@@ -5,6 +5,7 @@ import StockContext from '../utils/stockContext';
 // import Jumbotron from '../components/Jumbotron/Jumbotron';
  import Button from 'react-bootstrap/Button';
  import Jumbotron from 'react-bootstrap/Jumbotron';
+ import Footer from "../components/Footer/footer";
 
 function Stock() {
 
@@ -23,6 +24,7 @@ function Stock() {
                     <Button variant="primary">Learn more</Button>
                 </p>
             </Jumbotron>
+            <Footer/>
             {/* <Jumbotron /> */}
         </StockContext.Provider>
     )

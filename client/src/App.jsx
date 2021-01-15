@@ -14,6 +14,7 @@ import Wrapper from './components/Wrapper/Wrapper';
 // import { Card, Image } from 'react-bootstrap';
 
 
+
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
   constructor() {
@@ -39,6 +40,11 @@ class App extends Component {
   updateUser(userObject) {
     this.setState(userObject)
   }
+
+  // logout = () => {
+  //   this.setState({ sessionToken: ''});
+  //   localStorage.clear();
+  // }
 
   getUser() {
     axios.get('/user/').then(response => {
@@ -73,7 +79,7 @@ class App extends Component {
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/login" component={Login} />
-            {/* <Route exact path="/logout" component={Signout}/> */}
+            {/* <Route exact path="/logout" component={Logout}/> */}
             <Route exact path="/nomatch" component={NoMatch} />
           </Wrapper>
         </div>

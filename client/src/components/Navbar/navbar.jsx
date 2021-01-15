@@ -8,6 +8,7 @@ const Navbar = (props) => {
 
     const toggle = () => setDropdownOpen(!dropdownOpen);
 
+
     return (
         <div>
             <Nav tabs>
@@ -33,7 +34,7 @@ const Navbar = (props) => {
                     <NavLink href="#">Another Link</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink>Logout</NavLink>
+                    <NavLink href="/login">Logout</NavLink>
                 </NavItem>
             </Nav>
         </div>

@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const session = require('express-session')
 const passport = require('./passport');
-const user = require('./routes/apiRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./database')
@@ -24,13 +24,13 @@ if (process.env.NODE_ENV === "production") {
 
 //Middleware
 app.use(morgan('dev'))
-app.use(
-	bodyParser.urlencoded({
-		extended: false
-	})
-)
+// app.use(
+// 	bodyParser.urlencoded({
+// 		extended: false
+// 	})
+// )
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 
 // Sessions
 app.use(
@@ -71,10 +71,8 @@ app.use(passport.session()) // calls the deserializeUser
 //   });
 
 // Routes
-app.use('/user', user)
+app.use(apiRoutes)
 
-// Use apiRoutes
-// app.use(routes);
 
 
 // Connect to the Mongo DB

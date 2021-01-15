@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const session = require('express-session')
 const passport = require('./passport');
-const user = require('./routes/apiRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./database')
@@ -24,22 +24,25 @@ if (process.env.NODE_ENV === "production") {
 
 //Middleware
 app.use(morgan('dev'))
-app.use(
-	bodyParser.urlencoded({
-		extended: false
-	})
-)
+// app.use(
+// 	bodyParser.urlencoded({
+// 		extended: false
+// 	})
+// )
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 
 // Sessions
 app.use(
+	process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
 	session({
 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
 		store: new MongoStore({ mongooseConnection: dbConnection }),
 		resave: false, //required
 		saveUninitialized: false //required
-	})
+	},
+	{ useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+	)
 )
 
 // Passport
@@ -71,17 +74,15 @@ app.get('/auth/facebook/callback',
   });
 
 // Routes
-app.use('/user', user)
+app.use(apiRoutes)
 
-// Use apiRoutes
-// app.use(routes);
 
 
 // Connect to the Mongo DB
-mongoose.connect(
-	process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
-	{ useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
-);
+// mongoose.connect(
+//   process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
+//   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
+// );
 
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);

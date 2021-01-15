@@ -9,9 +9,9 @@ import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NoMatch from './pages/NoMatch';
 import Wrapper from './components/Wrapper/Wrapper';
+// import SignupForm from './components/SignUpForm/Form';
 // import FacebookLogin from 'react-facebook-login';
-import { Card, Image } from 'react-bootstrap';
-import Facebook from './components/FaceBook Button/Facebook';
+// import { Card, Image } from 'react-bootstrap';
 
 
 
@@ -21,7 +21,11 @@ class App extends Component {
     super()
     this.state = {
       loggedIn: false,
-      username: null
+      username: null,
+      lastName: null,
+      firstName: null,
+      email: null,
+
     }
 
     this.getUser = this.getUser.bind(this)
@@ -67,15 +71,10 @@ class App extends Component {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/Stock-up" component={Welcome} />
             <Route exact path="/welcome" component={Welcome} />
-            <Route exact path="/signup" render={() =>
-              <Signup />}
-            />
+            <Route exact path="/signup" component={Signup}/>
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/login" render={() =>
-              <Login
-                updateUser={this.updateUser}
-              />}
-            />
+            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/logout" component={Signout}/> */}
             <Route exact path="/nomatch" component={NoMatch} />
           </Wrapper>
         </div>

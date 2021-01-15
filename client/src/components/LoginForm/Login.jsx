@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import axios from 'axios'
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 class LoginForm extends Component {
     constructor() {
@@ -25,7 +25,7 @@ class LoginForm extends Component {
         console.log('handleSubmit')
 
         axios
-            .post('/user/login', {
+            .post('/login', {
                 username: this.state.username,
                 password: this.state.password
             })
@@ -33,15 +33,17 @@ class LoginForm extends Component {
                 console.log('login response: ')
                 console.log(response)
                 if (response.status === 200) {
+                    console.log('***REDIRECT to DASHBOARD')
                     // update App.js state
-                    this.props.updateUser({
-                        loggedIn: true,
-                        username: response.data.username
-                    })
+                    // this.props.updateUser({
+                    //     loggedIn: true,
+                    //     username: response.data.username
+                    // })
                     // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/'
-                    })
+                    // this.setState({
+                    //     redirectTo: '/'
+                    // })
+                    window.location.replace('/dashboard')
                 }
             }).catch(error => {
                 console.log('login error: ')

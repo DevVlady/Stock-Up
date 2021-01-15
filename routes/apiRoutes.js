@@ -1,16 +1,18 @@
 const router = require("express").Router();
 const path = require('path');
+// const { Redirect } = require("react-router");
 // const apiRoutes = require("./api");
 // const express = require('express');
 const User = require('../database/models/user');
-const passport = require('../passport')
+const passport = require('../passport');
+const { redirect } = require("../passport/localStrategy");
 
-
+// Endpoint: /user
 //Post route to build new user at Signup
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
     console.log('user signup');
 
-    const { username, password } = req.body
+    const { username, password, firstName, lastName, email } = req.body
     // ADD VALIDATION
     User.findOne({ username: username }, (err, user) => {
         if (err) {
@@ -23,7 +25,10 @@ router.post('/', (req, res) => {
         else {
             const newUser = new User({
                 username: username,
-                password: password
+                password: password,
+                firstName: firstName,
+                lastName: lastName,
+                email: email
             })
             newUser.save((err, savedUser) => {
                 if (err) return res.json(err)
@@ -36,40 +41,42 @@ router.post('/', (req, res) => {
 //Post - Successfully Login User
 router.post(
     '/login',
-    function (req, res, next) {
+    passport.authenticate('local'),
+    function (req, res) {
         console.log('routes/user.js, login, req.body: ');
         console.log(req.body)
-        next()
-    },
-    passport.authenticate('local'),
-    (req, res) => {
-        console.log('logged in', req.user);
-        var userInfo = {
-            username: req.user.username
-        };
-        res.send(userInfo);
+        if(!req.user) {
+            res.status(400).json({});
+        } else {
+            res.json(req.user);
+        }
     }
 )
 
 //Grab Exisiting Users
-router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
+router.get('/', (req, res) => {
+    console.log('GET/')
     console.log(req.user)
     if (req.user) {
-        res.json({ user: req.user })
+        console.log('**Redirect to Dashboard**')
+        res.redirect('/dashboard')
     } else {
-        res.json({ user: null })
+        console.log('**GET**Redirect to Signup')
+        res.redirect('/signup')
     }
 })
 
 //Logout User
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
+    console.log('**Signing Out**')
     if (req.user) {
         req.logout()
-        res.send({ msg: 'logging out' })
+        res.json({ msg: 'user signout'})
     } else {
-        res.send({ msg: 'no user to log out' })
+        //Change back to res.json
+        res.json({ msg: 'user signout'})
     }
 })
+
 
 module.exports = router;

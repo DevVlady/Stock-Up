@@ -62,15 +62,15 @@ class SignupForm extends Component {
             <Form inline>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="First Name" className="mr-sm-2">First Name</Label>
-                    <Input type="text" name="firstName" id="firstName" value={this.state.firstName} onChange={this.handleChange}/>
+                    <Input type="text" name="firstName" id="firstName" placeholder="First Name" value={this.state.firstName} onChange={this.handleChange}/>
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="Last Name" className="mr-sm-2">Last Name</Label>
-                    <Input type="text" name="lastName" id="lastName" value={this.state.lastName} onChange={this.handleChange}/>
+                    <Input type="text" name="lastName" id="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleChange}/>
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="Username" className="mr-sm-2">Username</Label>
-                    <Input type="text" name="username" id="username" value={this.state.username} onChange={this.handleChange}/>
+                    <Input type="text" name="username" id="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="email" className="mr-sm-2">Email</Label>
@@ -78,7 +78,7 @@ class SignupForm extends Component {
                 </FormGroup>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="Password" className="mr-sm-2">Password</Label>
-                    <Input type="password" name="password" id="Password" value={this.state.password} onChange={this.handleChange} />
+                    <Input type="password" name="password" id="Password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                 </FormGroup>
                 <Button onClick={this.handleSubmit}>Submit</Button>
                 <a href="/login">Login</a>

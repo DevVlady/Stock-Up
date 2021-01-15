@@ -69,11 +69,7 @@ class App extends Component {
             <Route exact path="/welcome" component={Welcome} />
             <Route exact path="/signup" component={SignupForm}/>
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/login" render={() =>
-              <Login
-                updateUser={this.updateUser}
-              />}
-            />
+            <Route exact path="/login" component={Login} />
             {/* <Route exact path="/logout" component={Signout}/> */}
             <Route exact path="/nomatch" component={NoMatch} />
           </Wrapper>

@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-app.use(express.static("public"));
+app.use(express.static("public/build"));
 //Middleware
 app.use(morgan('dev'))
 
@@ -43,7 +43,7 @@ app.use(passport.session()) // calls the deserializeUser
 
 app.use(apiRoutes)
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
 })
 

@@ -8,11 +8,14 @@ const apiRoutes = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./database')
-// const FacebookStrategy = require("passport-facebook").Strategy;
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 // const routes = require("./routes");
+
+// const publicPath = path.join(__dirname, './client/public/');
+app.use(express.static('public'));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -24,13 +27,7 @@ if (process.env.NODE_ENV === "production") {
 
 //Middleware
 app.use(morgan('dev'))
-// app.use(
-// 	bodyParser.urlencoded({
-// 		extended: false
-// 	})
-// )
 
-// app.use(bodyParser.json())
 
 // Sessions
 app.use(
@@ -49,38 +46,7 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session()) // calls the deserializeUser
 
-// passport.use(new FacebookStrategy({
-// 	clientID: process.env.CLIENT_ID_FB,
-// 	clientSecret: process.env.CLIENT_SECRET_FB,
-// 	callbackURL: "http://localhost:3000/auth/facebook/secrets"
-// },
-// 	function (accessToken, refreshToken, profile, cb) {
-// 		User.findOrCreate({ facebookId: profile.id }, function (err, user) {
-// 			return cb(err, user);
-// 		});
-// 	}
-// ));
-
-// app.get('/auth/facebook',
-//   passport.authenticate('facebook'));
-
-// app.get('/auth/facebook/callback',
-//   passport.authenticate('facebook', { failureRedirect: '/login' }),
-//   function(req, res) {
-//     // Successful authentication, redirect home.
-//     res.redirect('/welcome');
-//   });
-
-// Routes
 app.use(apiRoutes)
-
-
-
-// Connect to the Mongo DB
-// mongoose.connect(
-//   process.env.MONGODB_URI || "mongodb://localhost/stock-up-users",
-//   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
-// );
 
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);

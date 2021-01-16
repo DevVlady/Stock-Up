@@ -3,10 +3,10 @@ import React from 'react';
 import Navbar from '../components/Navbar/navbar';
 import StockContext from '../utils/stockContext';
 // import Jumbotron from '../components/Jumbotron/Jumbotron';
- import Button from 'react-bootstrap/Button';
- import Jumbotron from 'react-bootstrap/Jumbotron';
- import Footer from "../components/Footer/footer";
- import Sidebar from '../components/Sidebar/Sidebar';
+import Button from 'react-bootstrap/Button';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Footer from "../components/Footer/footer";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 function Stock() {
 

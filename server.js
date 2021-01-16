@@ -15,7 +15,7 @@ const app = express();
 // const routes = require("./routes");
 
 // const publicPath = path.join(__dirname, './client/public/');
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

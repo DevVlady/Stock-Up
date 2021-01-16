@@ -7,7 +7,7 @@ import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
-import NoMatch from './pages/NoMatch';
+import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
 // import SignupForm from './components/SignUpForm/Form';
@@ -80,7 +80,7 @@ class App extends Component {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout}/>
-            <Route exact path="/nomatch" component={NoMatch} />
+            <Route exact path="/nomatch" component={NotExist} />
           </Wrapper>
         </div>
       </Router>

@@ -1,9 +1,9 @@
 import React from 'react';
 // import API from '../utils/API';
-import Navbar from '../components/Navbar/navbar';
+import Navbar from '../components/Navbar/Navbar';
 import StockContext from '../utils/stockContext';
 // import Logout from '../components/Logout/Logout';
-import Jumbotron from '../components/Dashboard/dashboard'
+import Jumbotron from '../components/Jumbotron/Jumbotron';
 
 function Stock() {
 

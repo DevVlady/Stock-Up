@@ -3,6 +3,8 @@ import './navbar.css';
 import React, { useState } from 'react';
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 // import Logout from '../Logout/Logout';
+import { Link } from 'react-router-dom'
+
 
 const Navbar = (props) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -35,7 +37,9 @@ const Navbar = (props) => {
                     <NavLink href="#">Another Link</NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="#">Logout</NavLink>
+                    <Link>
+                        <NavLink href="#">Logout</NavLink>
+                    </Link>
                 </NavItem>
             </Nav>
         </div>

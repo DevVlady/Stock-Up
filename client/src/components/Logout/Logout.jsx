@@ -4,21 +4,18 @@ import React from 'react';
 // import {Redirect} from "react-dom"
 import { Redirect } from "react-router-dom";
 import { Button } from 'reactstrap';
-
+import { useHistory } from "react-router-dom";
 
 
 const Logout = () => {
-    axios.get('/logout')
-        .then(() => {
-            // React.redirect('/login')
-            <Redirect to = {{pathname: '/login'}}/>
-        })
-
+    const logout = () => {
+        axios().then(res => history.push("/login"))
+      }
     return (
         <div>
-      <Button color="danger">danger</Button>{' '}
-    </div>
+            <Button color="danger">danger</Button>{' '}
+        </div>
     )
-  }
+}
 
 export default Logout;

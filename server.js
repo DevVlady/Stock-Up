@@ -18,6 +18,8 @@ if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 }
 
+
+app.use(express.static("public"));
 //Middleware
 app.use(morgan('dev'))
 
@@ -42,7 +44,7 @@ app.use(passport.session()) // calls the deserializeUser
 app.use(apiRoutes)
 
 app.get('*', (req, res) => {
-	res.sendFile(path.join(__dirname, "./client/public"));
+	res.sendFile(path.join(__dirname, "./client/public/index.html"));
 })
 
 app.listen(PORT, function () {

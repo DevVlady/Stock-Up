@@ -1,6 +1,6 @@
 import React from 'react';
 // import API from '../utils/API';
-import Navbar from '../components/Navbar/navbar';
+import Navbar from '../components/Navbar/Navbar';
 import StockContext from '../utils/stockContext';
 // import Jumbotron from '../components/Jumbotron/Jumbotron';
 import Button from 'react-bootstrap/Button';

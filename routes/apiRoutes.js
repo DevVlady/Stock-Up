@@ -72,6 +72,7 @@ router.get('/logout', (req, res) => {
     if (req.user) {
         req.logout()
         res.json({ msg: 'user signout'})
+        // res.redirect('/login')
     } else {
         //Change back to res.json
         res.json({ msg: 'user signout'})

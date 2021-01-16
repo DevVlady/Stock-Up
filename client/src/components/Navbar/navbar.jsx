@@ -1,19 +1,49 @@
-import React from 'react';
-import './navbar.css';
+// import React from 'react';
+import './Navbar.css';
+import React, { useState } from 'react';
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+// import Logout from '../Logout/Logout';
+import { Link } from 'react-router-dom'
 
-function Navbar() {
+
+const Navbar = (props) => {
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggle = () => setDropdownOpen(!dropdownOpen);
+
+
     return (
-        <nav className="navbar navbar-light bg-light">
-            <div className="container-fluid">
-                <h1>Stock Up</h1>
-                <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search Stock" aria-label="Search" />
-                        <button className="btn btn-outline-primary" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-        
-    )
+        <div>
+            <Nav tabs>
+                <NavItem>
+                    <NavLink href="#" active>Link</NavLink>
+                </NavItem>
+                <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
+                    <DropdownToggle nav caret>
+                        Dropdown
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <DropdownItem header>Header</DropdownItem>
+                        <DropdownItem disabled>Action</DropdownItem>
+                        <DropdownItem>Another Action</DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>Another Action</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
+                <NavItem>
+                    <NavLink href="#">Link</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="#">Another Link</NavLink>
+                </NavItem>
+                <NavItem>
+                    <Link>
+                        <NavLink href="#">Logout</NavLink>
+                    </Link>
+                </NavItem>
+            </Nav>
+        </div>
+    );
 }
 
 export default Navbar;

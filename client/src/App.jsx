@@ -7,12 +7,12 @@ import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
-import NoMatch from './pages/NoMatch';
+import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
+import Logout from './components/Logout/Logout';
 // import SignupForm from './components/SignUpForm/Form';
 // import FacebookLogin from 'react-facebook-login';
 // import { Card, Image } from 'react-bootstrap';
-
 
 
 class App extends Component {
@@ -25,7 +25,7 @@ class App extends Component {
       lastName: null,
       firstName: null,
       email: null,
-
+      sessionToken: '',
     }
 
     this.getUser = this.getUser.bind(this)
@@ -40,6 +40,11 @@ class App extends Component {
   updateUser(userObject) {
     this.setState(userObject)
   }
+
+  // logout = () => {
+  //   this.setState({ sessionToken: ''});
+  //   localStorage.clear();
+  // }
 
   getUser() {
     axios.get('/user/').then(response => {
@@ -74,8 +79,8 @@ class App extends Component {
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/login" component={Login} />
-            {/* <Route exact path="/logout" component={Signout}/> */}
-            <Route exact path="/nomatch" component={NoMatch} />
+            <Route exact path="/logout" component={Logout}/>
+            <Route exact path="/nomatch" component={NotExist} />
           </Wrapper>
         </div>
       </Router>

@@ -3,7 +3,7 @@ const path = require('path');
 // const { Redirect } = require("react-router");
 // const apiRoutes = require("./api");
 // const express = require('express');
-const User = require('../database/models/user');
+const User = require('../models/user');
 const passport = require('../passport');
 const { redirect } = require("../passport/localStrategy");
 

@@ -7,7 +7,7 @@ const passport = require('./passport');
 const apiRoutes = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
-const dbConnection = require('./database')
+const dbConnection = require('./models')
 const path = require('path');
 
 const PORT = process.env.PORT || 3001;

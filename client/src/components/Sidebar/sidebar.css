@@ -17,8 +17,7 @@ body {
 
 .SidebarList {
     height: auto;
-    padding: 0;
-    width: 100%;
+    width:100%;
     /* background-color: aqua; */
 }
 
@@ -35,8 +34,20 @@ body {
     justify-content: center;
     align-items:center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-
 }
+
+.SidebarList .row:hover {
+    cursor:pointer;
+    background-color: #293846;
+}
+
+/* .row #icon {
+    flex: 30%;
+}
+
+.row #title {
+    flex: 70%;
+} */
+
 
 

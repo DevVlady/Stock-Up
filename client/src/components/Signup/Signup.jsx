@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Form.css';
+import './Signup.css';
 import axios from 'axios';
 // import Facebook from '../FaceBook Button/Facebook';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';

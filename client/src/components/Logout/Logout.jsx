@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import './Logout.css';
 // import { Button } from 'reactstrap';
 // import {Redirect} from "react-dom"
 // import { Redirect } from "react-router-dom";

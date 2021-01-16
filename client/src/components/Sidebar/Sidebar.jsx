@@ -5,21 +5,21 @@ import {SidebarData} from './SidebarData';
 function Sidebar() {
     return (
         <div className="Sidebar">
-            <ul>
+            <ul className="SidebarList">
             {SidebarData.map((val,key)=> {
                 return  (
-                <li key={key} onClick={() =>{window.location.pathname = val.link}}>
+                <li key={key} className="row" onClick={() =>{window.location.pathname = val.link}}>
                     {""}
                     <div>{val.icon}</div> {""}
                     <div>
                         {val.title}
                     </div>
-                    </li>
-                )
+                </li>
+                );
             })}
             </ul>
         </div>
-    )
+    );
 }
 
 export default Sidebar;

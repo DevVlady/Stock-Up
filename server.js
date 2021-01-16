@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-app.use(express.static("public/build"));
+app.use(express.static("public"));
 //Middleware
 app.use(morgan('dev'))
 

@@ -13,6 +13,9 @@ const Dashboard = (props) => {
         // <StockContext.Provider>
         <Router>
             <Navbar/>
+            <Switch>
+                <Route path="/" />
+            </Switch>
             <Jumbotron/>
             {/* <SearchBar/> */}
             {/* <Logout/> */}

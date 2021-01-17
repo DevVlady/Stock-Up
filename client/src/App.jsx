@@ -72,7 +72,7 @@ class App extends Component {
       //basename={`${BASE_NAME}`}
       <Router>
         <div>
-          <Wrapper>
+          {/* <Wrapper> */}
             <Route exact path="/" component={Welcome} />
             <Route exact path="/Stock-up" component={Welcome} />
             <Route exact path="/welcome" component={Welcome} />
@@ -81,7 +81,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout}/>
             <Route exact path="/nomatch" component={NotExist} />
-          </Wrapper>
+          {/* </Wrapper> */}
         </div>
       </Router>
     );

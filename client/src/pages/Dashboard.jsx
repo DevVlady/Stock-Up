@@ -14,7 +14,7 @@ const Dashboard = (props) => {
         <Router>
             <Navbar/>
             <Switch>
-                <Route path="/" component={Signup}/>
+                <Route path="/" />
             </Switch>
             <Jumbotron/>
             {/* <SearchBar/> */}

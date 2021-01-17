@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/Vlady14/Stock-Up/issues"
   },
-  "homepage": "https://github.com/Vlady14/Stock-Up#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",

@@ -17,6 +17,18 @@ class Stock extends React.Component {
     fetchStock() {
         const API_KEY = process.env.ALPHA_STOCKS_API_KEY;
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=TSCO.LON&outputsize=full&apikey=${API_KEY}`;
+
+        fetch(API_Call)
+            .then(
+                function(response) {
+                    return response.json();
+                }
+            )
+            .then(
+                function(data) {
+                    console.log(data);
+                }
+            )
     }
 
     render() {

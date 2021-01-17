@@ -6,12 +6,6 @@ import StockContext from '../utils/stockContext';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 import SearchBar from '../components/Search/Search'
 
-// function Stock() {
-
-
-// }
-
-// export default Stock;
 
 const Dashboard = (props) => {
     return (

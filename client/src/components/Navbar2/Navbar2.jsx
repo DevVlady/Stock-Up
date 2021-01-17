@@ -14,7 +14,7 @@ function Navbar() {
         <div>
             <div className="navbar">
                 <Link to="#" className='menu-bars'>
-                    <FaIcons.FaBars/>
+                    <FaIcons.FaBars onClick={showSidebar}/>
                 </Link>
             </div>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

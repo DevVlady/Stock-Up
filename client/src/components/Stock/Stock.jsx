@@ -1,5 +1,6 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
+import SearchBar from '../Search/Search';
 
 class Stock extends React.Component {
     constructor(props) {
@@ -18,7 +19,7 @@ class Stock extends React.Component {
         const mousePosition = this;
         console.log(mousePosition);
         const API_KEY = process.env.ALPHA_STOCKS_API_KEY;
-        let StocksSymbol = 'AAPL';
+        let StocksSymbol = '';
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StocksSymbol}&outputsize=full&apikey=${API_KEY}`;
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
@@ -52,6 +53,7 @@ class Stock extends React.Component {
         return (
             <div>
                 <h1>Stock Market</h1>
+                <SearchBar/>
                 <Plot
                     data={[
                         {

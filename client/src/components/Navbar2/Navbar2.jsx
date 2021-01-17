@@ -1,13 +1,20 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
-    <div>
-        <div className="navbar">
-            <Link to="#" className='menu-bars'>
 
-            </Link>
+    return (
+        <div>
+            <div className="navbar">
+                <Link to="#" className='menu-bars'>
+                    <FaIcons.FaBars/>
+
+                </Link>
+            </div>
         </div>
-    </div>
+    )
 }
+
+export default Navbar;

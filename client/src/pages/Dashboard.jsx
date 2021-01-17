@@ -6,9 +6,14 @@ import StockContext from '../utils/stockContext';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 import SearchBar from '../components/Search/Search'
 
-function Stock() {
+// function Stock() {
 
 
+// }
+
+// export default Stock;
+
+const Dashboard = (props) => {
     return (
         <StockContext.Provider>
             <Navbar/>
@@ -17,6 +22,7 @@ function Stock() {
             {/* <Logout/> */}
         </StockContext.Provider>
     )
-}
 
-export default Stock;
+};
+
+export default Dashboard;

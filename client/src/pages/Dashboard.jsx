@@ -5,6 +5,7 @@ import StockContext from '../utils/stockContext';
 // import Logout from '../components/Logout/Logout';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 
+
 function Stock() {
 
 

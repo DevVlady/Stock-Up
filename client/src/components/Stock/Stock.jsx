@@ -55,15 +55,15 @@ class Stock extends React.Component {
                 <Plot
                     data={[
                         {
-                            x: [1, 2, 3],
-                            y: [2, 6, 3],
+                            x: this.state.stockChartXValues,
+                            y: this.state.stockChartYValue,
                             type: 'scatter',
                             mode: 'lines+markers',
                             marker: { color: 'red' },
                         },
                         { type: 'bar', x: [1, 2, 3], y: [2, 5, 3] },
                     ]}
-                    layout={{ width: 1250, height: 1200, title: 'A Fancy Plot' }}
+                    layout={{ width: 1250, height: 1200, title: 'Stocks Chart' }}
                 />
             </div>
         )

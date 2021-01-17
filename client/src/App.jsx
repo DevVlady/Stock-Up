@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
+import Stocks from './pages/Stocks';
 // import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
 // import SignupForm from './components/SignUpForm/Form';
@@ -78,6 +79,7 @@ class App extends Component {
             <Route exact path="/welcome" component={Welcome} />
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/stocks" component={Stocks} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout}/>
             <Route exact path="/nomatch" component={NotExist} />

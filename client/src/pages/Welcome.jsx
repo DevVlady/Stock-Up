@@ -2,14 +2,12 @@ import React from 'react';
 import WelcomePg from '../components/Welcome/Welcome';
 
 
-function Welcome() {
-
-
+const Welcome = (props) => {
     return (
         <WelcomePg>
 
         </WelcomePg>
     )
-}
+};
 
 export default Welcome;

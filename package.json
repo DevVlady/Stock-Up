@@ -9,8 +9,8 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd client && npm install",
     "build": "cd client && npm run build",
+    "install": "cd client && npm install",
     "heroku-postbuild": "npm run build"
   },
   "repository": {
@@ -23,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/Vlady14/Stock-Up/issues"
   },
-  "homepage": "https://github.com/Vlady14/Stock-Up#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",

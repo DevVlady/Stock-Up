@@ -1,21 +1,14 @@
 const express = require("express");
-const mongoose = require("mongoose");
-//Required for Passport Login
-const bodyParser = require('body-parser');
 const session = require('express-session')
 const passport = require('./passport');
 const apiRoutes = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
-const dbConnection = require('./database')
+const dbConnection = require('./models')
 const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-// const routes = require("./routes");
-
-// const publicPath = path.join(__dirname, './client/public/');
-app.use(express.static('public'));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +18,8 @@ if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 }
 
+
+app.use(express.static("public"));
 //Middleware
 app.use(morgan('dev'))
 
@@ -47,6 +42,10 @@ app.use(passport.initialize())
 app.use(passport.session()) // calls the deserializeUser
 
 app.use(apiRoutes)
+
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, "./client/build/index.html"));
+})
 
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);

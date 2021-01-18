@@ -3,20 +3,13 @@ import Plot from 'react-plotly.js';
 import SearchBar from '../Search/Search';
 
 class Stock extends React.Component {
-    //**USED FOR MEMORY LEAK**
-    _isMounted = false;
-
+  
     constructor(props) {
         super(props);
         this.state = {
             stockChartXValues: [],
             stockChartYValue: []
         }
-        //**USED TO SEARCH STOCK BY SYMBOL**
-        // this.SearchBox = React.createRef();
-        // this.searchBarEl = React.createRef();
-        // this.searchStocks = this.searchStocks.bind(this);
-
     }
 
     componentDidMount() {
@@ -24,6 +17,8 @@ class Stock extends React.Component {
     }
 
     fetchStock() {
+
+
         const mousePosition = this;
         console.log(mousePosition);
         const API_KEY = process.env.ALPHA_STOCKS_API_KEY;

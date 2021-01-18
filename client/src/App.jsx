@@ -7,7 +7,8 @@ import Login from './pages/Login';
 import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
-import Wrapper from './components/Wrapper/Wrapper';
+import Stocks from './pages/Stocks';
+// import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
 import { FooterContainer} from './containers/Footer';
 // import { GlobalStyles } from './global-styles';
@@ -70,17 +71,17 @@ class App extends Component {
       <Router>
         {/* <GlobalStyles/> */}
         <div>
-          <Wrapper>
+          {/* <Wrapper> */}
             <Route exact path="/" component={Welcome} />
             <Route exact path="/Stock-up" component={Welcome} />
             <Route exact path="/welcome" component={Welcome} />
             <Route exact path="/signup" component={Signup}/>
             <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/stocks" component={Stocks} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout}/>
             <Route exact path="/nomatch" component={NotExist} />
-          </Wrapper>
-          <FooterContainer/>
+          {/* </Wrapper> */}
         </div>
       </Router>
     );

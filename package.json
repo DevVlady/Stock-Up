@@ -36,6 +36,9 @@
     "passport": "^0.4.1",
     "passport-facebook": "^3.0.0",
     "passport-local": "^1.0.0",
+    "plotly.js": "^1.58.4",
+    "react-icons": "^4.1.0",
+    "react-plotly.js": "^2.5.1",
     "spectre.css": "^0.5.9"
   },
   "devDependencies": {

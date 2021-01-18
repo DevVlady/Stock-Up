@@ -57,7 +57,7 @@ class Stock extends React.Component {
     render() {
         return (
             <div>
-                <Navbar>
+                <h1>Stock Market</h1>
                 <SearchBar/>
                 <Plot
                     data={[
@@ -72,9 +72,6 @@ class Stock extends React.Component {
                     ]}
                     layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
                 />
-
-                </Navbar>
-                <h1>Stock Market</h1>
             </div>
         )
     }

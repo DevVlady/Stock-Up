@@ -6,13 +6,13 @@ import * as AiIcons from 'react-icons/ai';
 export const SidebarData = [
     {
         title: "Home",
-        path: '/',
+        path: '/dashboard',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
     },
     {
         title: "Graphs",
-        path: '/',
+        path: '/stocks',
         icon: <AiIcons.AiOutlineBarChart/>,
         cName: 'nav-text'
     },
@@ -30,7 +30,7 @@ export const SidebarData = [
     },
     {
         title: "Logout",
-        path: '/',
+        path: '/logout',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
     },

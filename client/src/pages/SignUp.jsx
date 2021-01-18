@@ -5,11 +5,8 @@ import SignupForm from '../components/Signup/Signup';
 
 const Signup = (props) => {
     return (
-        <SignupForm>
-
-        </SignupForm>
+        <SignupForm/>
     )
-
 };
 
 export default Signup;

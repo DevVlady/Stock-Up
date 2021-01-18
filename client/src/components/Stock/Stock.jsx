@@ -2,15 +2,6 @@ import React from 'react';
 import Plot from 'react-plotly.js';
 import './Stock.css';
 
-var style = {
-    base:{
-        border: 'none',
-        fontSize: '18px',
-        zIndex: 3,
-        position: 'relative'
-    },
-};
-
 class Stock extends React.Component {
 
     constructor(props) {
@@ -65,21 +56,19 @@ class Stock extends React.Component {
         return (
             <div>
                 <div className="graph">
-                <Plot
-                    data={[
-                        {
-                            x: this.state.stockChartXValues,
-                            y: this.state.stockChartYValue,
-                            type: 'bar',
-                            mode: 'lines+markers',
-                            marker: { color: 'blue' },
-                        },
-                        // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
-                    ]}
-                    layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
-                    style={style.base}
-                />
-
+                    <Plot
+                        data={[
+                            {
+                                x: this.state.stockChartXValues,
+                                y: this.state.stockChartYValue,
+                                type: 'bar',
+                                mode: 'lines+markers',
+                                marker: { color: 'blue' },
+                            },
+                            // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
+                        ]}
+                        layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
+                    />
                 </div>
             </div>
         )

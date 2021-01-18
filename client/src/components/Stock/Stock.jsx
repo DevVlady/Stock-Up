@@ -1,10 +1,10 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 import SearchBar from '../Search/Search';
+import Navbar from '../Navbar/Navbar';
+import './Stock.css';
 
 class Stock extends React.Component {
-    //**USED FOR MEMORY LEAK**
-    _isMounted = false;
 
     constructor(props) {
         super(props);
@@ -12,11 +12,6 @@ class Stock extends React.Component {
             stockChartXValues: [],
             stockChartYValue: []
         }
-        //**USED TO SEARCH STOCK BY SYMBOL**
-        // this.SearchBox = React.createRef();
-        // this.searchBarEl = React.createRef();
-        // this.searchStocks = this.searchStocks.bind(this);
-
     }
 
     componentDidMount() {
@@ -24,6 +19,8 @@ class Stock extends React.Component {
     }
 
     fetchStock() {
+
+
         const mousePosition = this;
         console.log(mousePosition);
         const API_KEY = process.env.ALPHA_STOCKS_API_KEY;
@@ -69,10 +66,11 @@ class Stock extends React.Component {
                             y: this.state.stockChartYValue,
                             type: 'bar',
                             mode: 'lines+markers',
-                            marker: { color: 'red' },
+                            marker: { color: 'blue' },
                         },
+                        // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
                     ]}
-                    layout={{ width: 1250, height: 1100, title: 'Stocks Chart' }}
+                    layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
                 />
             </div>
         )

@@ -1,21 +1,21 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+// import * as IoIcons from 'react-icons/io';
 
 export const SidebarData = [
     {
         title: "Home",
-        path: '/',
+        path: '/dashboard',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
-    }, 
+    },
     {
         title: "Graphs",
-        path: '/',
+        path: '/stocks',
         icon: <AiIcons.AiOutlineBarChart/>,
         cName: 'nav-text'
-    }, 
+    },
     {
         title: "News",
         path: '/',
@@ -30,7 +30,7 @@ export const SidebarData = [
     },
     {
         title: "Logout",
-        path: '/',
+        path: '/logout',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
     },

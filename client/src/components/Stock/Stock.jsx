@@ -3,7 +3,7 @@ import Plot from 'react-plotly.js';
 import SearchBar from '../Search/Search';
 
 class Stock extends React.Component {
-  
+
     constructor(props) {
         super(props);
         this.state = {
@@ -56,7 +56,7 @@ class Stock extends React.Component {
         return (
             <div>
                 <h1>Stock Market</h1>
-                <SearchBar/>
+                <SearchBar />
                 <Plot
                     data={[
                         {
@@ -64,10 +64,25 @@ class Stock extends React.Component {
                             y: this.state.stockChartYValue,
                             type: 'bar',
                             mode: 'lines+markers',
-                            marker: { color: 'red' },
+                            marker: { color: 'blue' },
                         },
+                        // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
                     ]}
-                    layout={{ width: 1250, height: 1100, title: 'Stocks Chart' }}
+                    layout={{ width: 1100, height: 1100, title: 'Stocks Chart' }}
+                />
+                <Bar
+                    data={state}
+                    options={{
+                        title: {
+                            display: true,
+                            text: 'Average Rainfall per month',
+                            fontSize: 20
+                        },
+                        legend: {
+                            display: true,
+                            position: 'right'
+                        }
+                    }}
                 />
             </div>
         )

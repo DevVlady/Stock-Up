@@ -1,10 +1,12 @@
-.loginForm{
+form{
     position: relative;
-    margin-left: 40%;
     margin-top: 50%;
-    justify-content: center;
-    margin-bottom: 40%;
-    margin-right: 50%;
+    margin-bottom: 50%;
+    margin-left: 35%;
+    width: 325px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 35px;
 }
 
 Label{
@@ -13,4 +15,9 @@ Label{
 
 #username{
     margin-left: -4px;
+}
+
+#signupBtn {
+    margin-left: 5px;
+    background: blue;
 }

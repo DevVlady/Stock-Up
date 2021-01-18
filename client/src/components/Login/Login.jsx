@@ -59,33 +59,27 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div className="loginForm">
-                    <Form inline>
-                        {/* <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                        <Label for="First Name" className="mr-sm-2">First Name</Label>
-                        <Input type="text" name="firstName" id="firstName" value={this.state.firstName} onChange={this.handleChange}/>
-                    </FormGroup> */}
-                        {/* <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                        <Label for="Last Name" className="mr-sm-2">Last Name</Label>
-                        <Input type="text" name="lastName" id="lastName" value={this.state.lastName} onChange={this.handleChange}/>
-                    </FormGroup> */}
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="Username" className="mr-sm-2">Username</Label>
-                            <Input type="text" name="username" id="username" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
-                        </FormGroup>
-                        {/* <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                        <Label for="email" className="mr-sm-2">Email</Label>
-                        <Input type="email" name="email" id="email" placeholder="email@example.com" value={this.state.email} onChange={this.handleChange}/>
-                    </FormGroup> */}
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="Password" className="mr-sm-2">Password</Label>
-                            <Input type="password" name="password" id="Password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
-                        </FormGroup>
-                        <Button onClick={this.handleSubmit}>Submit</Button>
-                        <a href="/signup">Signup</a>
-                    </Form>
-                </div>
-            )
+                <form>
+                    <h3>Sign In</h3>
+                    <div className="form-group">
+                        <label>Email address</label>
+                        <input type="email" className="form-control" placeholder="Enter email" />
+                    </div>
+                    <div className="form-group">
+                        <label>Password</label>
+                        <input type="password" className="form-control" placeholder="Enter password" />
+                    </div>
+                    <div className="form-group">
+                        <div className="custom-control custom-checkbox">
+                            <input type="checkbox" className="custom-control-input" id="customCheck1" />
+                            <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                    <p className="forgot-password text-right">
+                        Forgot <a href="#">password?</a>
+                    </p>
+                </form>)
         }
     }
 }

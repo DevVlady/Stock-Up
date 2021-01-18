@@ -14,9 +14,9 @@ export function FooterContainer() {
                 </Footer.Column>
                 <Footer.Column>
                     <Footer.Title>Services</Footer.Title>
-                    <Footer.Link href="#">Story</Footer.Link>
-                    <Footer.Link href="#">Clients</Footer.Link>
-                    <Footer.Link href="#">Testimonials</Footer.Link>
+                    <Footer.Link href="#">Stocks Report</Footer.Link>
+                    <Footer.Link href="#">Investment Calculator</Footer.Link>
+                    <Footer.Link href="#">Business Transactions</Footer.Link>
                 </Footer.Column>
             </Footer.Wrapper>
             <Footer.Column>

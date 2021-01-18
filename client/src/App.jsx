@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
+import { FooterContainer} from './container/footer';
 
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
@@ -77,6 +78,7 @@ class App extends Component {
             <Route exact path="/logout" component={Logout}/>
             <Route exact path="/nomatch" component={NotExist} />
           </Wrapper>
+          <FooterContainer/>
         </div>
       </Router>
     );

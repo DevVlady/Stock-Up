@@ -32,10 +32,10 @@ export const SidebarData = [
         icon: <FaIcons.FaEnvelopeOpenText />,
         cName: 'nav-text'
     },
-    {
-        // title: "Logout",
-        // path: '/logout',
-        icon: <FaIcons.FaPowerOff/>,
-        cName: 'nav-text'
-    },
+    // {
+    //     title: "Logout",
+    //     path: '/logout',
+    //     icon: <FaIcons.FaPowerOff/>,
+    //     cName: 'nav-text'
+    // },
 ]

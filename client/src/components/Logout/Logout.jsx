@@ -3,14 +3,16 @@ import React from 'react';
 import './Logout.css';
 import { Button } from 'reactstrap';
 import { useHistory } from "react-router-dom";
+import { IoMdPower } from 'react-icons/io';
+
 
 
 var style = {
     base:{
         background: '#060b26',
-        marginLeft: '16px',
+        marginLeft: '18px',
         border: 'none',
-        fontSize: '20px'
+        fontSize: '18px'
     },
     //...other styles...
 };
@@ -22,7 +24,7 @@ const Logout = () => {
       }
     return (
         <div>
-            <Button style={style.base} onClick={() => logout()}>Logout</Button>
+            <Button style={style.base} onClick={() => logout()}>< IoMdPower/>   Logout</Button>
         </div>
     )
 }

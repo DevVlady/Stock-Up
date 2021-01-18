@@ -2,7 +2,6 @@ import './App.css';
 import axios from 'axios'
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import { Route, Link } from 'react-router-dom'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
@@ -10,64 +9,60 @@ import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
-// import SignupForm from './components/SignUpForm/Form';
-// import FacebookLogin from 'react-facebook-login';
-// import { Card, Image } from 'react-bootstrap';
 
+class App extends Component {
+  // const BASE_NAME = "/Stock-Up";
+  constructor() {
+    super()
+    this.state = {
+      loggedIn: false,
+      username: null,
+      lastName: null,
+      firstName: null,
+      email: null,
+      sessionToken: '',
+    }
 
-function App() {
-  // // const BASE_NAME = "/Stock-Up";
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     loggedIn: false,
-  //     username: null,
-  //     lastName: null,
-  //     firstName: null,
-  //     email: null,
-  //     sessionToken: '',
-  //   }
+    this.getUser = this.getUser.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
+    this.updateUser = this.updateUser.bind(this)
+  }
 
-  //   this.getUser = this.getUser.bind(this)
-  //   this.componentDidMount = this.componentDidMount.bind(this)
-  //   this.updateUser = this.updateUser.bind(this)
+  componentDidMount() {
+    this.getUser()
+  }
+
+  updateUser(userObject) {
+    this.setState(userObject)
+  }
+
+  // logout = () => {
+  //   this.setState({ sessionToken: ''});
+  //   localStorage.clear();
   // }
 
-  // componentDidMount() {
-  //   this.getUser()
-  // }
+  getUser() {
+    axios.get('/user/').then(response => {
+      console.log('Get user response: ')
+      console.log(response.data)
+      if (response.data.user) {
+        console.log('Get User: There is a user saved in the server session: ')
 
-  // updateUser(userObject) {
-  //   this.setState(userObject)
-  // }
+        this.setState({
+          loggedIn: true,
+          username: response.data.user.username
+        })
+      } else {
+        console.log('Get user: no user');
+        this.setState({
+          loggedIn: false,
+          username: null
+        })
+      }
+    })
+  }
 
-  // // logout = () => {
-  // //   this.setState({ sessionToken: ''});
-  // //   localStorage.clear();
-  // // }
-
-  // getUser() {
-  //   axios.get('/user/').then(response => {
-  //     console.log('Get user response: ')
-  //     console.log(response.data)
-  //     if (response.data.user) {
-  //       console.log('Get User: There is a user saved in the server session: ')
-
-  //       this.setState({
-  //         loggedIn: true,
-  //         username: response.data.user.username
-  //       })
-  //     } else {
-  //       console.log('Get user: no user');
-  //       this.setState({
-  //         loggedIn: false,
-  //         username: null
-  //       })
-  //     }
-  //   })
-  // }
-
-  // render() {
+  render() {
     return (
       //basename={`${BASE_NAME}`}
       <Router>
@@ -85,7 +80,7 @@ function App() {
         </div>
       </Router>
     );
-  
+    }
 }
 
 export default App;

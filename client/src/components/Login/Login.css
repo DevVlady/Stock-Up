@@ -1,0 +1,16 @@
+.loginForm{
+    position: relative;
+    margin-left: 40%;
+    margin-top: 50%;
+    justify-content: center;
+    margin-bottom: 40%;
+    margin-right: 50%;
+}
+
+Label{
+    padding: 8px;
+}
+
+#username{
+    margin-left: -4px;
+}

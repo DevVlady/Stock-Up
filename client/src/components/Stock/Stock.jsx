@@ -1,7 +1,5 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-// import SearchBar from '../Search/Search';
-// import Navbar from '../Navbar/Navbar';
 import './Stock.css';
 
 var style = {
@@ -66,7 +64,6 @@ class Stock extends React.Component {
     render() {
         return (
             <div>
-                {/* <SearchBar/> */}
                 <div className="graph">
                 <Plot
                     data={[

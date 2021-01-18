@@ -11,7 +11,6 @@ const SearchBar = (props) => {
         <FormControl type="text" placeholder="Search by Symbol" className="mr-sm-2" />
         <Button type="submit">Submit</Button>
       </Form>
-
     </div>
   );
 };

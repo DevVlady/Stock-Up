@@ -3,12 +3,20 @@ import Plot from 'react-plotly.js';
 import SearchBar from '../Search/Search';
 
 class Stock extends React.Component {
+    //**USED FOR MEMORY LEAK**
+    _isMounted = false;
+
     constructor(props) {
         super(props);
         this.state = {
             stockChartXValues: [],
             stockChartYValue: []
         }
+        //**USED TO SEARCH STOCK BY SYMBOL**
+        // this.SearchBox = React.createRef();
+        // this.searchBarEl = React.createRef();
+        // this.searchStocks = this.searchStocks.bind(this);
+
     }
 
     componentDidMount() {
@@ -19,7 +27,7 @@ class Stock extends React.Component {
         const mousePosition = this;
         console.log(mousePosition);
         const API_KEY = process.env.ALPHA_STOCKS_API_KEY;
-        let StocksSymbol = '';
+        let StocksSymbol = 'AAPL';
         let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StocksSymbol}&outputsize=full&apikey=${API_KEY}`;
         let stockChartXValuesFunction = [];
         let stockChartYValuesFunction = [];
@@ -59,11 +67,10 @@ class Stock extends React.Component {
                         {
                             x: this.state.stockChartXValues,
                             y: this.state.stockChartYValue,
-                            type: 'scatter',
+                            type: 'bar',
                             mode: 'lines+markers',
                             marker: { color: 'red' },
                         },
-                        { type: 'bar', x: [1, 2, 3], y: [2, 5, 3] },
                     ]}
                     layout={{ width: 1250, height: 1100, title: 'Stocks Chart' }}
                 />

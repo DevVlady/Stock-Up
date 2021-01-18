@@ -59,15 +59,15 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <form>
+                <form className="loginForm">
                     <h3>Sign In</h3>
                     <div className="form-group">
-                        <label>Email address</label>
-                        <input type="email" className="form-control" placeholder="Enter email" />
+                        <label for="Username">Username</label>
+                        <input type="text" name="username" id="username" className="form-control" placeholder="Enter username" value={this.state.username} onChange={this.handleChange} />
                     </div>
                     <div className="form-group">
-                        <label>Password</label>
-                        <input type="password" className="form-control" placeholder="Enter password" />
+                        <label for="Password">Password</label>
+                        <input type="password" name="password" className="form-control" placeholder="Enter password" value={this.state.password} onChange={this.handleChange} />
                     </div>
                     <div className="form-group">
                         <div className="custom-control custom-checkbox">
@@ -75,9 +75,9 @@ class LoginForm extends Component {
                             <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary btn-block">Submit</button>
+                    <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block">Submit</button>
                     <p className="forgot-password text-right">
-                        Forgot <a href="#">password?</a>
+                        New User? <a href="/signup"> Signup HERE</a>
                     </p>
                 </form>)
         }

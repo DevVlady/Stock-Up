@@ -10,6 +10,7 @@ import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
 import { FooterContainer} from './containers/Footer';
+// import { GlobalStyles } from './global-styles';
 
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
@@ -67,6 +68,7 @@ class App extends Component {
     return (
       //basename={`${BASE_NAME}`}
       <Router>
+        {/* <GlobalStyles/> */}
         <div>
           <Wrapper>
             <Route exact path="/" component={Welcome} />

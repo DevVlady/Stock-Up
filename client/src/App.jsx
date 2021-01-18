@@ -9,7 +9,7 @@ import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
-import { FooterContainer} from './container/footer';
+import { FooterContainer} from './containers/Footer';
 
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";

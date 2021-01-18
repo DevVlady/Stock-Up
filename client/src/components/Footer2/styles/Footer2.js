@@ -5,12 +5,12 @@ export const Container = styled.div`
     background: radial-gradient(circle, rgba(92, 39, 251, 1) 0%, rgba(1123, 71,247,1) 100%)
 `
 
-export const Container = styled.div``
+export const Wrapper = styled.div``
 
-export const Container = styled.div``
+export const Column = styled.div``
 
-export const Container = styled.div``
+export const Row = styled.div``
 
-export const Container = styled.div``
+export const Link = styled.div``
 
-export const Container = styled.div``
+export const Title = styled.div``

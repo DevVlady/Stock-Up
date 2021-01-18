@@ -4,6 +4,7 @@ import * as AiIcons from 'react-icons/ai';
 import {Link} from 'react-router-dom';
 import {SidebarData} from './NavbarSideData';
 import "./Navbar.css";
+import Logout from '../Logout/Logout';
 
 function Navbar() {
 
@@ -36,10 +37,13 @@ function Navbar() {
                             </li>
                         )
                     })}
+                    <li>
+                        <Logout to={'/login'}/>
+                    </li>
                 </ul>
             </nav>
         </div>
-        
+
 
     )
 }

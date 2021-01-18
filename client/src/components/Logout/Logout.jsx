@@ -5,6 +5,16 @@ import { Button } from 'reactstrap';
 import { useHistory } from "react-router-dom";
 
 
+var style = {
+    base:{
+        background: '#060b26',
+        marginLeft: '16px',
+        border: 'none',
+        fontSize: '20px'
+    },
+    //...other styles...
+};
+
 const Logout = () => {
     let history = useHistory();
     const logout = () => {
@@ -12,7 +22,7 @@ const Logout = () => {
       }
     return (
         <div>
-            <Button onClick={() => logout()}>Logout</Button>
+            <Button style={style.base} onClick={() => logout()}>Logout</Button>
         </div>
     )
 }

@@ -2,7 +2,6 @@ import './App.css';
 import axios from 'axios'
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import { Route, Link } from 'react-router-dom'
 import Signup from './pages/SignUp';
 import Login from './pages/Login';
 import Welcome from './pages/Welcome';
@@ -10,10 +9,6 @@ import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
 import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
-// import SignupForm from './components/SignUpForm/Form';
-// import FacebookLogin from 'react-facebook-login';
-// import { Card, Image } from 'react-bootstrap';
-
 
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
@@ -85,7 +80,7 @@ class App extends Component {
         </div>
       </Router>
     );
-  }
+    }
 }
 
 export default App;

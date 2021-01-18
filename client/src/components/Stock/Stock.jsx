@@ -1,10 +1,17 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import SearchBar from '../Search/Search';
+// import SearchBar from '../Search/Search';
 // import Navbar from '../Navbar/Navbar';
 import './Stock.css';
 
-
+var style = {
+    base:{
+        border: 'none',
+        fontSize: '18px',
+        zIndex: 3,
+        position: 'relative'
+    },
+};
 
 class Stock extends React.Component {
 
@@ -59,7 +66,8 @@ class Stock extends React.Component {
     render() {
         return (
             <div>
-                <SearchBar/>
+                {/* <SearchBar/> */}
+                <div className="graph">
                 <Plot
                     data={[
                         {
@@ -72,7 +80,10 @@ class Stock extends React.Component {
                         // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
                     ]}
                     layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
+                    style={style.base}
                 />
+
+                </div>
             </div>
         )
     }

@@ -5,12 +5,15 @@ import Button from 'react-bootstrap/Button';
 import FormControl from 'react-bootstrap/FormControl';
 
 const SearchBar = (props) => {
-    return (
-        <Form inline>
-    <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-    <Button type="submit">Submit</Button>
-  </Form>
-    );
+  return (
+    <div className="searchBox">
+      <Form inline>
+        <FormControl type="text" placeholder="Search by Symbol" className="mr-sm-2" />
+        <Button type="submit">Submit</Button>
+      </Form>
+
+    </div>
+  );
 };
 
 export default SearchBar;

@@ -21,13 +21,13 @@ export function FooterContainer() {
                 </Footer.Column>
                 <Footer.Column>
                     <Footer.Title>Developers</Footer.Title>
-                    <Footer.Link href="#">Michael Bartek</Footer.Link>
-                    <Footer.Link href="#">Vladimir Dimitrov</Footer.Link>
-                    <Footer.Link href="#">Joshua Obando</Footer.Link>
+                    <Footer.Link href="https://github.com/Hoybaby">Michael Bartek</Footer.Link>
+                    <Footer.Link href="https://github.com/Vlady14">Vladimir Dimitrov</Footer.Link>
+                    <Footer.Link href="https://github.com/joshobando">Joshua Obando</Footer.Link>
                 </Footer.Column>
                 <Footer.Column>
                     <Footer.Title>Social</Footer.Title>
-                    <Footer.Link href="#">LinkedIn</Footer.Link>
+                    <Footer.Link href="https://google.com">LinkedIn</Footer.Link>
                     <Footer.Link href="#">Github</Footer.Link>
                     <Footer.Link href="#">Instagram</Footer.Link>
                 </Footer.Column>

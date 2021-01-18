@@ -8,10 +8,12 @@ import Welcome from './pages/Welcome';
 import Dashboard from './pages/Dashboard';
 import NotExist from './pages/NotExist';
 import Stocks from './pages/Stocks';
-// import Wrapper from './components/Wrapper/Wrapper';
 import Logout from './components/Logout/Logout';
 import { FooterContainer} from './containers/Footer';
 // import { GlobalStyles } from './global-styles';
+import Navbar from './components/Navbar/Navbar';
+
+
 
 class App extends Component {
   // const BASE_NAME = "/Stock-Up";
@@ -67,11 +69,10 @@ class App extends Component {
 
   render() {
     return (
-      //basename={`${BASE_NAME}`}
       <Router>
+        <Navbar/>
         {/* <GlobalStyles/> */}
         <div>
-          {/* <Wrapper> */}
             <Route exact path="/" component={Welcome} />
             <Route exact path="/Stock-up" component={Welcome} />
             <Route exact path="/welcome" component={Welcome} />
@@ -81,8 +82,9 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout}/>
             <Route exact path="/nomatch" component={NotExist} />
-          {/* </Wrapper> */}
         </div>
+        <FooterContainer/>
+
       </Router>
     );
     }

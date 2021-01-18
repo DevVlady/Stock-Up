@@ -4,6 +4,8 @@ import SearchBar from '../Search/Search';
 // import Navbar from '../Navbar/Navbar';
 import './Stock.css';
 
+
+
 class Stock extends React.Component {
 
     constructor(props) {
@@ -57,7 +59,6 @@ class Stock extends React.Component {
     render() {
         return (
             <div>
-                <h1>Stock Market</h1>
                 <SearchBar/>
                 <Plot
                     data={[

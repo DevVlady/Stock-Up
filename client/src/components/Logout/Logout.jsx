@@ -14,7 +14,6 @@ var style = {
         border: 'none',
         fontSize: '18px'
     },
-    //...other styles...
 };
 
 const Logout = () => {

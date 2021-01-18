@@ -38,7 +38,7 @@ function Navbar() {
                         )
                     })}
                     <li>
-                        <Logout to={'/login'}/>
+                        <Logout/>
                     </li>
                 </ul>
             </nav>

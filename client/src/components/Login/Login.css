@@ -4,11 +4,11 @@ body {
 
 .loginForm{
     position: relative;
-    margin-top: 30%;
-    margin-bottom: 30%;
-    margin-left: 35%;
+    left: 50%;
+    margin-top: 55px;
+    margin-right: -50%;
+    transform: translate(-50%);
     width: 325px;
-    border: 1px solid black;
     border-radius: 30px;
     padding: 35px;
     height: 550px;

@@ -1,10 +1,10 @@
 .signupForm {
     position: relative;
-    margin-top: 15%;
-    margin-bottom: 15%;
-    margin-left: 25%;
+    margin-top: 15px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
     width: 525px;
-    border: 1px solid black;
     border-radius: 30px;
     padding: 35px;
     height: 750px;

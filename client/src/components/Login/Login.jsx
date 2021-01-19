@@ -77,7 +77,7 @@ class LoginForm extends Component {
                     </div>
                     <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block">Submit</button>
                     <p className="forgot-password text-right">
-                        New User? <a href="/signup"> Signup HERE</a>
+                        New User? <a href="/signup"> Sign-Up HERE</a>
                     </p>
                 </form>)
         }

@@ -9,10 +9,12 @@
 
 img {
     border-radius: 20%;
-    height: 700px;
-    width: 700px;
+    height: 600px;
+    width: 600px;
     position: relative;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%)
 }
+
+

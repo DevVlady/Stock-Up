@@ -1,13 +1,15 @@
 import React from 'react';
 import Stock from '../components/Stock/Stock';
+import SearchBar from '../components/Search/Search';
 
 
 
 const MarketStocks = (props) => {
     return (
-        <Stock>
-
-        </Stock>
+        <div>
+        <SearchBar/>
+        <Stock/>
+        </div>
     )
 
 };

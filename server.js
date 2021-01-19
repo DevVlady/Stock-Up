@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require('express-session')
 const passport = require('./passport');
-const apiRoutes = require('./routes/api/apiRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./models')
@@ -45,7 +45,7 @@ app.use(apiRoutes)
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
-})
+});
 
 app.listen(PORT, function () {
 	console.log(`🌎 ==> API server now on port ${PORT}!`);

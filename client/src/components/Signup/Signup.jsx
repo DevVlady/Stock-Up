@@ -8,14 +8,6 @@ import GoogleLogin from 'react-google-login';
 
 let loginPath = (process.env.NODE_ENV === "production") ? "https://my-stock-up.herokuapp.com/auth/google" : "http://localhost:3001/auth/google"
 
-var style = {
-    icon: {
-        fontSize: '92px',
-        marginRight: '10px',
-        marginLeft: '1px',
-    }
-};
-
 class SignupForm extends Component {
     //Used for Google Signin
     responseGoogle=(response)=> {
@@ -99,7 +91,6 @@ class SignupForm extends Component {
                     Already registered? <a href="/login">Sign-In HERE?</a>
                 </p>
                 <GoogleLogin
-                style={style.icon}
                 clientId="984123359552-m0q70i6c34gfb986tk9bbvobjh9k8huq.apps.googleusercontent.com"
                 buttonText="Sign-in with Google"
                 href={loginPath}

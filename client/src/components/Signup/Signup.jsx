@@ -62,16 +62,16 @@ class SignupForm extends Component {
             <form className="signupForm">
                 <h3>Sign Up</h3>
                 <div className="form-group">
-                    <label>First Name</label>
+                    <label for="First Name">First Name</label>
                     <input type="text" name="firstName" className="form-control" placeholder="First name" value={this.state.firstName} onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
+                    <label for="Last Name">Last name</label>
+                    <input type="text" name="lastName" className="form-control" placeholder="Last name" value={this.state.lastName} onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
+                    <label for="Username">Username</label>
+                    <input type="text" name="username" className="form-control" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
                     <label>Email address</label>

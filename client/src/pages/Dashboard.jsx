@@ -1,14 +1,26 @@
-import React from 'react';
-import GoogleBtn from '../components/Google oAUth Button/GoogleBtn';
+import React, { Component } from 'react'
+import GoogleLogin from 'react-google-login';
 
+export class Dashbooard extends Component {
 
+    responseGoogle=(response)=> {
+        console.log(response);
+        console.log(response.profileObj);
+    }
 
-const Dashboard = (props) => {
-    return (
-        <div>
-            <GoogleBtn/>
-        </div>
-    )
+    render() {
+        return (
+            <div>
+                <GoogleLogin
+                clientId="984123359552-m0q70i6c34gfb986tk9bbvobjh9k8huq.apps.googleusercontent.com"
+                buttonText="Log In"
+                onSuccess={this.responseGoogle}
+                onFailure={this.responseGoogle}
+                cookiePolicy={'single_host_origin'}
+                />
+            </div>
+        )
+    }
 }
 
-export default Dashboard;
+export default Dashbooard;

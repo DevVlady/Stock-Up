@@ -16,8 +16,8 @@ export function FooterContainer() {
                 </Footer.Column>
                 <Footer.Column>
                     <Footer.Title>Services</Footer.Title>
-                    <Footer.Link href="#">Stocks Report</Footer.Link>
-                    <Footer.Link href="#">Investment Calculator</Footer.Link>
+                    <Footer.Link href="https://www.nasdaq.com/market-activity/stocks">Stocks Report</Footer.Link>
+                    <Footer.Link href="https://www.bankrate.com/calculators/retirement/investment-goal-calculator.aspx">Investment Calculator</Footer.Link>
                     <Footer.Link href="#">Business Transactions</Footer.Link>
                 </Footer.Column>
                 <Footer.Column>

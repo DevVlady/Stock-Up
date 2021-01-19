@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './Signup.css';
 import axios from 'axios';
 // import Facebook from '../FaceBook Button/Facebook';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
 // import SignupForm from './components/SignUpForm/Form';
 // import FacebookLogin from 'react-facebook-login';
 
@@ -44,9 +42,7 @@ class SignupForm extends Component {
                 if (!response.data.errmsg) {
                     console.log('successful signup')
                     window.location.replace('/dashboard')
-                    // this.setState({ //redirect to login page
-                    //     redirectTo: '/login'
-                    // })
+
                 } else {
                     console.log('username already taken')
                 }

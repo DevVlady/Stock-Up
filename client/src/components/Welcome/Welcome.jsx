@@ -10,7 +10,6 @@ const Welcome = (props) => {
       <Jumbotron>
         <h1 className="display-3">The FUTURE is here</h1>
         <img src={Logo} alt="Logo"/>
-
         <hr className="my-2" />
         <p className="lead">
           <a href="/signup"><Button style={{fontSize: '25px'}} color="primary">Sign Up</Button></a>

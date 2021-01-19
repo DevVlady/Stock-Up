@@ -1,11 +1,13 @@
 import React from 'react';
 
+
+
 const Dashboard = (props) => {
     return (
-       <div>
+        <div>
 
-       </div>
+        </div>
     )
-};
+}
 
 export default Dashboard;

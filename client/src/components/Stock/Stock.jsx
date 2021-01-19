@@ -1,7 +1,5 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import SearchBar from '../Search/Search';
-// import Navbar from '../Navbar/Navbar';
 import './Stock.css';
 
 class Stock extends React.Component {
@@ -57,21 +55,21 @@ class Stock extends React.Component {
     render() {
         return (
             <div>
-                <h1>Stock Market</h1>
-                <SearchBar/>
-                <Plot
-                    data={[
-                        {
-                            x: this.state.stockChartXValues,
-                            y: this.state.stockChartYValue,
-                            type: 'bar',
-                            mode: 'lines+markers',
-                            marker: { color: 'blue' },
-                        },
-                        // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
-                    ]}
-                    layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
-                />
+                <div className="graph">
+                    <Plot
+                        data={[
+                            {
+                                x: this.state.stockChartXValues,
+                                y: this.state.stockChartYValue,
+                                type: 'bar',
+                                mode: 'lines+markers',
+                                marker: { color: 'blue' },
+                            },
+                            // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
+                        ]}
+                        layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
+                    />
+                </div>
             </div>
         )
     }

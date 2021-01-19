@@ -59,38 +59,33 @@ class SignupForm extends Component {
 
     render() {
         return (
-            <div className="cointainer">
-                <div className='signupForm'>
-                    <Form inline>
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="First Name" className="mr-sm-2">First Name</Label>
-                            <Input type="text" name="firstName" id="firstName" placeholder="First Name" value={this.state.firstName} onChange={this.handleChange} />
-                        </FormGroup>
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="Last Name" className="mr-sm-2">Last Name</Label>
-                            <Input type="text" name="lastName" id="lastName" placeholder="Last Name" value={this.state.lastName} onChange={this.handleChange} />
-                        </FormGroup>
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="Username" className="mr-sm-2">Username</Label>
-                            <Input type="text" name="username" id="username" placeholder="Username" value={this.state.username} onChange={this.handleChange} />
-                        </FormGroup>
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="email" className="mr-sm-2">Email</Label>
-                            <Input type="email" name="email" id="email" placeholder="email@example.com" value={this.state.email} onChange={this.handleChange} />
-                        </FormGroup>
-                        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                            <Label for="Password" className="mr-sm-2">Password</Label>
-                            <Input type="password" name="password" id="Password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
-                        </FormGroup>
-                        <Button onClick={this.handleSubmit}>Submit</Button>
-                        <br />
-                        OR
-                        <a href="/login">Login</a>
-                    </Form>
+            <form className="signupForm">
+                <h3>Sign Up</h3>
+                <div className="form-group">
+                    <label for="First Name">First Name</label>
+                    <input type="text" name="firstName" className="form-control" placeholder="First name" value={this.state.firstName} onChange={this.handleChange}/>
                 </div>
-                {/* // <div className="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="true" data-use-continue-as="false"></div> */}
-            </div>
-        )
+                <div className="form-group">
+                    <label for="Last Name">Last name</label>
+                    <input type="text" name="lastName" className="form-control" placeholder="Last name" value={this.state.lastName} onChange={this.handleChange}/>
+                </div>
+                <div className="form-group">
+                    <label for="Username">Username</label>
+                    <input type="text" name="username" className="form-control" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
+                </div>
+                <div className="form-group">
+                    <label >Email address</label>
+                    <input type="text" name="email" className="form-control" placeholder="email@example.com" value={this.state.email} onChange={this.handleChange}/>
+                </div>
+                <div className="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" className="form-control" placeholder="Enter password" value={this.state.password} onChange={this.handleChange} />
+                </div>
+                <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <p className="forgot-password text-right">
+                    Already registered? <a href="/login">Sign-In HERE?</a>
+                </p>
+            </form>)
     }
 }
 

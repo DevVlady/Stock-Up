@@ -9,10 +9,16 @@ import { IoMdPower } from 'react-icons/io';
 var style = {
     base: {
         background: '#060b26',
-        marginLeft: '18px',
+        marginLeft: '20px',
         border: 'none',
-        fontSize: '18px'
+        fontSize: '19px',
+        marginTop: '8px'
     },
+    icon: {
+        fontSize: '22px',
+        marginRight: '10px',
+        marginLeft: '1px',
+    }
 };
 
 const Logout = () => {
@@ -22,7 +28,7 @@ const Logout = () => {
     }
     return (
         <div>
-            <Button style={style.base} onClick={() => logout()}>< IoMdPower />   Logout</Button>
+            <Button style={style.base} onClick={() => logout()}><IoMdPower style={style.icon} />   Logout</Button>
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import './Welcome.css';
 import Logo from './images/Stock_Up_Logo.png'
-
 import { Jumbotron, Button } from 'reactstrap';
+
 
 const Welcome = (props) => {
   return (
@@ -12,7 +12,7 @@ const Welcome = (props) => {
         <img src={Logo} alt="Logo"/>
         <hr className="my-2" />
         <p className="lead">
-          <a href="/signup"><Button style={{fontSize: '25px'}} color="primary">Sign Up</Button></a>
+          <a href="/signup"><Button style={{fontSize: '25px', alignItems: 'center'}} color="primary">Sign Up</Button></a>
         </p>
       </Jumbotron>
     </div>

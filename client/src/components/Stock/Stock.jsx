@@ -67,7 +67,7 @@ class Stock extends React.Component {
                             },
                             // {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
                         ]}
-                        layout={{ width: 1100, height: 1100, title: 'Monthly Stocks Chart' }}
+                        layout={{ width: 1100, height: 750, title: 'Monthly Stocks Chart' }}
                     />
                 </div>
             </div>

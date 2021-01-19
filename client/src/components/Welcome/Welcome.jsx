@@ -1,18 +1,39 @@
 import React from 'react';
 import './Welcome.css';
 import Logo from './images/Stock_Up_Logo.png'
-
 import { Jumbotron, Button } from 'reactstrap';
+
+
+var style = {
+  btn: {
+      background: '#060b26',
+      border: 'none',
+      fontSize: '30px',
+      marginTop: '42px',
+      marginBottom: '5px',
+      marginLeft: '44%',
+      color: 'orange'
+  },
+  tron: {
+      heigth: '1100px',
+      background: '#2980b9'
+  },
+  head: {
+    textAlign: 'center',
+    marginBottom: '5px'
+}
+};
+
 
 const Welcome = (props) => {
   return (
     <div>
-      <Jumbotron>
-        <h1 className="display-3">The FUTURE is here</h1>
+      <Jumbotron style={style.tron}>
         <img src={Logo} alt="Logo"/>
-        <hr className="my-2" />
+        {/* <h1 style={style.head} className="display-3">FUTURE...INVESTED</h1> */}
+
         <p className="lead">
-          <a href="/signup"><Button style={{fontSize: '25px'}} color="primary">Sign Up</Button></a>
+          <a href="/signup"><Button style={style.btn} color="primary">Sign-Up</Button></a>
         </p>
       </Jumbotron>
     </div>

@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import { IoMdPower } from 'react-icons/io';
 
 
-
 var style = {
     base: {
         background: '#060b26',

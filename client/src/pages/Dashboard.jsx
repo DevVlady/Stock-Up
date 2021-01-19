@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import GoogleLogin from 'react-google-login';
 
-let loginPath = (process.env.NODE_ENV === "production") ? "" : "http://localhost:3001/auth/google"
+let loginPath = (process.env.NODE_ENV === "production") ? "https://my-stock-up.herokuapp.com/auth/google" : "http://localhost:3001/auth/google"
 
 export class Dashbooard extends Component {
 

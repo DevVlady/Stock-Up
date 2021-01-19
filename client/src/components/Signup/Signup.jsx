@@ -74,14 +74,14 @@ class SignupForm extends Component {
                     <input type="text" name="username" className="form-control" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <label >Email address</label>
+                    <input type="text" name="email" className="form-control" placeholder="email@example.com" value={this.state.email} onChange={this.handleChange}/>
                 </div>
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" className="form-control" placeholder="Enter password" value={this.state.password} onChange={this.handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+                <button onClick={this.handleSubmit} type="submit" className="btn btn-primary btn-block">Sign Up</button>
                 <p className="forgot-password text-right">
                     Already registered? <a href="/login">Sign-In HERE?</a>
                 </p>

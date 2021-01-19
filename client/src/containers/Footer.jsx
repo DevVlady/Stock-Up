@@ -35,6 +35,5 @@ export function FooterContainer() {
                 </Footer.Row>
             </Footer.Wrapper>
         </Footer>
-
         )
 }

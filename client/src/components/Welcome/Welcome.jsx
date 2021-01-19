@@ -5,14 +5,14 @@ import { Jumbotron, Button } from 'reactstrap';
 
 
 var style = {
-  base: {
+  btn: {
       background: '#060b26',
       border: 'none',
       fontSize: '30px',
-      marginTop: '5px',
+      marginTop: '42px',
       marginBottom: '5px',
       marginLeft: '44%',
-      color: 'red'
+      color: 'orange'
   },
   tron: {
       heigth: '1100px',
@@ -30,10 +30,10 @@ const Welcome = (props) => {
     <div>
       <Jumbotron style={style.tron}>
         <img src={Logo} alt="Logo"/>
-        <h1 style={style.head} className="display-3">FUTURE...INVESTED</h1>
+        {/* <h1 style={style.head} className="display-3">FUTURE...INVESTED</h1> */}
 
         <p className="lead">
-          <a href="/signup"><Button style={style.base} color="primary">Sign Up</Button></a>
+          <a href="/signup"><Button style={style.btn} color="primary">Sign-Up</Button></a>
         </p>
       </Jumbotron>
     </div>

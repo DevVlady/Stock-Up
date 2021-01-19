@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 80px 60px;
+    padding: 60px 10px;
     background: radial-gradient(circle, rgba(92, 39, 251, 1) 0%, rgba(112, 71,247,1) 100%);
     z-index: -5;
     position: absolute;
     bottom:0;
     left:0;
     width: 100%;
-    height: 400px;
+    height: 300px;
 `
 
 export const Wrapper = styled.div`

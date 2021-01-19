@@ -9,10 +9,13 @@ var style = {
       background: '#060b26',
       border: 'none',
       fontSize: '30px',
-      marginTop: '42px',
-      marginBottom: '5px',
-      marginLeft: '44%',
-      color: 'orange'
+      position: 'relative',
+      left: '50%',
+      marginRight: '-50%',
+      transform: 'translate(-50%)',
+      color: 'orange',
+      marginTop: '25px',
+      marginBottom: '25px'
   },
   tron: {
       heigth: '1100px',

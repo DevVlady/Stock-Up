@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import './Signup.css';
 import axios from 'axios';
+import GoogleLogin from 'react-google-login';
 // import Facebook from '../FaceBook Button/Facebook';
 // import SignupForm from './components/SignUpForm/Form';
 // import FacebookLogin from 'react-facebook-login';
 
+let loginPath = (process.env.NODE_ENV === "production") ? "https://my-stock-up.herokuapp.com/auth/google" : "http://localhost:3001/auth/google"
+
 class SignupForm extends Component {
+    //Used for Google Signin
+    responseGoogle=(response)=> {
+        console.log(response);
+        console.log(response.profileObj);
+    }
+
     constructor() {
         super()
         this.state = {
@@ -81,6 +90,14 @@ class SignupForm extends Component {
                 <p className="forgot-password text-right">
                     Already registered? <a href="/login">Sign-In HERE?</a>
                 </p>
+                <GoogleLogin
+                clientId="984123359552-m0q70i6c34gfb986tk9bbvobjh9k8huq.apps.googleusercontent.com"
+                buttonText="Sign-in with Google"
+                href={loginPath}
+                onSuccess={this.responseGoogle}
+                onFailure={this.responseGoogle}
+                cookiePolicy={'single_host_origin'}
+                />
             </form>)
     }
 }

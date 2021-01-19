@@ -84,7 +84,6 @@ class App extends Component {
             <Route exact path="/nomatch" component={NotExist} />
         </div>
         <FooterContainer/>
-
       </Router>
     );
     }

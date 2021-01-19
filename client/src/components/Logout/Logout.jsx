@@ -12,7 +12,7 @@ var style = {
         marginLeft: '20px',
         border: 'none',
         fontSize: '19px',
-        marginTop: '8px'
+        marginTop: '8px',
     },
     icon: {
         fontSize: '22px',

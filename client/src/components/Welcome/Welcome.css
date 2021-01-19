@@ -1,0 +1,18 @@
+/* body {
+    background-color: crimson;
+} */
+
+.welcomeContent{
+    z-index: -10;
+    position: relative
+}
+
+img {
+    border-radius: 20%;
+    height: 700px;
+    width: 700px;
+    position: relative;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%)
+}

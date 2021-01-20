@@ -1,28 +1,23 @@
 const passport = require('passport')
 const LocalStrategy = require('./localStrategy')
 const User = require('../models/user.js')
+const GoogleStrategy = require('passport-google-oauth20')
+const keys = require('./keys')
 
 // called on login, saves the id to session req.session.passport.user = {id:'..'}
 passport.serializeUser((user, done) => {
 	console.log('*** serializeUser called, user: ')
 	console.log(user) // the whole raw user object!
 	console.log('---------')
-	done(null, { _id: user._id })
+	done(null,  user.id )
 })
 
 // user object attaches to the request as req.user
 passport.deserializeUser((id, done) => {
 	console.log('DeserializeUser called')
-	User.findOne(
-		{ _id: id },
-		'username',
-		(err, user) => {
-			console.log('*** Deserialize user, user:')
-			console.log(user)
-			console.log('--------------')
-			done(null, user)
-		}
-	)
+	User.findById(id).then((user) => {
+		done(null, user);
+	})
 })
 
 //Google oAuth Redirect Path
@@ -35,7 +30,21 @@ passport.use(
 		callbackURL: redirectPath,
 		clientID: keys.google.clientID,
 		clientSecret: keys.google.clientSecret
-	}, (accessToken, refreshToken, profile, done)
+	}, (accessToken, refreshToken, profile, done) => {
+		console.log(profile)
+
+		User.findOne({googleid: profile.id}).then((currentUser) => {
+			if(currentUser){
+				console.log(" The current user is: ", currentUser)
+				done(null, currentUser)
+			} else {
+				new User({
+					displayName: profile.displayName,
+					googleid: profile.id
+				})
+			}
+		})
+	}
 	)
 )
 

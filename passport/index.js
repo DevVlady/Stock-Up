@@ -25,6 +25,20 @@ passport.deserializeUser((id, done) => {
 	)
 })
 
+//Google oAuth Redirect Path
+const redirectPath = process.env.NODE_ENV === "production" ? ('https://my-stock-up.herokuapp.com/auth/google/redirect') : ('http://localhost:3001/auth/google/redirect')
+
+//Passport & OAuth for Google Sign-in
+passport.use(
+	new GoogleStrategy(
+		{
+		callbackURL: redirectPath,
+		clientID: keys.google.clientID,
+		clientSecret: keys.google.clientSecret
+	}, (accessToken, refreshToken, profile, done)
+	)
+)
+
 //  Use Strategies
 passport.use(LocalStrategy)
 

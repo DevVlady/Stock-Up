@@ -38,7 +38,7 @@ router.post('/signup', (req, res) => {
     })
 })
 
-//Post - Successfully Login User
+//ost - Successfully Login User
 router.post(
     '/login',
     passport.authenticate('local'),

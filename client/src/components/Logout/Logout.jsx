@@ -20,14 +20,17 @@ var style = {
     }
 };
 
+let logoutPath = (process.env.NODE_ENV === "production") ? "" : "http://localhost:3001/auth/logout"
+
 const Logout = () => {
-    let history = useHistory();
-    const logout = () => {
-        axios('/logout').then(res => history.push("/login"))
-    }
+    // let history = useHistory();
+    // const logout = () => {
+    //     axios('/logout').then(res => history.push("/login"))
+    // }
     return (
         <div>
-            <Button style={style.base} onClick={() => logout()}><IoMdPower style={style.icon} />   Logout</Button>
+            <a href={logoutPath}> <Button style={style.base} > Logout</Button></a>
+
         </div>
     )
 }

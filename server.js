@@ -6,6 +6,12 @@ const morgan = require('morgan');
 const MongoStore = require('connect-mongo')(session);
 const dbConnection = require('./models')
 const path = require('path');
+const oAuthRoutes = require('./routes/oAuthRoutes');
+const { Cookie } = require("express-session");
+const cookieSession = require('cookie-session');
+const keys = require("./passport/keys");
+const profileRoutes = require('./routes/profile-routes')
+//const routes = require('./routes')
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -17,6 +23,10 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 }
+
+app.use(cookieSession( {
+	keys: [keys.session.cookieKey]
+}))
 
 
 app.use(express.static("public"));
@@ -42,6 +52,10 @@ app.use(passport.initialize())
 app.use(passport.session()) // calls the deserializeUser
 
 app.use(apiRoutes)
+app.use('/auth', oAuthRoutes)
+app.use('profile', profileRoutes)
+
+
 
 app.get('*', (req, res) => {
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));

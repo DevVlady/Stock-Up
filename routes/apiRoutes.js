@@ -3,9 +3,9 @@ const path = require('path');
 // const { Redirect } = require("react-router");
 // const apiRoutes = require("./api");
 // const express = require('express');
-const User = require('../../models/user');
-const passport = require('../../passport');
-const { redirect } = require("../../passport/localStrategy");
+const User = require('../models/user');
+const passport = require('../passport');
+const { redirect } = require("../passport/localStrategy");
 
 // Endpoint: /user
 //Post route to build new user at Signup

@@ -1,8 +1,8 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React from 'react';
 import { Button } from 'reactstrap';
-import { useHistory } from "react-router-dom";
-import { IoMdPower } from 'react-icons/io';
+// import { useHistory } from "react-router-dom";
+// import { IoMdPower } from 'react-icons/io';
 
 
 var style = {

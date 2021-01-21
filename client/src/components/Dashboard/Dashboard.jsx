@@ -58,17 +58,41 @@ const Main = () => {
                                 </div>
                                 <i className="fa fa-usd" aria-hidden="true"></i>
                             </div>
-                            <Chart/>
+                            <Chart />
                         </div>
 
                         <div className="charts__right">
                             {/* title of card */}
                             <div className="charts__right__title">
                                 <div>
-                                    <h1>Trilogy Worth</h1>
+                                    <h1>Trilogy Value</h1>
                                     <p>New York City</p>
                                 </div>
-                                <i className="fa fa-usd" aria-hidden="true"/>
+                                <i className="fa fa-usd" aria-hidden="true" />
+                            </div>
+
+                            <div className="charts__right__cards">
+                                <div className="card1">
+                                    <h1>Sold For</h1>
+                                    <p>750 million</p>
+                                </div>
+                            </div>
+
+                            <div className="charts__right__cards">
+                                <div className="card2">
+                                    <h1>Sales</h1>
+                                    <p>135 million</p>
+                                </div>
+                            </div>
+
+                            <div className="card3">
+                                <h1>Users</h1>
+                                <p>3900</p>
+                            </div>
+
+                            <div className="card4">
+                                <h1>Colleges Working With</h1>
+                                <p>63</p>
                             </div>
 
                         </div>

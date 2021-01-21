@@ -33,13 +33,13 @@ const Dashboard = () => {
                     </div>
 
                     <div className="card">
-                        <i
+                        {/* <i
                             className="fa fa-video-camera fa-2x text-yellow"
                             aria-hidden="true"
-                        ></i>
+                        ></i> */}
                         <div className="card_inner">
-                            <p className="text-primary-p">Number of Videos</p>
-                            <span className="font-bold text-title">340</span>
+                            <p className="text-primary-p">Percentage of Growth</p>
+                            <span className="font-bold text-title">2.3%</span>
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ const Dashboard = () => {
                         <div className="charts__left__title">
                             <div>
                                 <h1>Daily Reports</h1>
-                                <p>Cupertino, California, USA</p>
+                                <p>Newark, New Jersey, USA</p>
                             </div>
                             <i className="fa fa-usd" aria-hidden="true"></i>
                         </div>
@@ -95,8 +95,8 @@ const Dashboard = () => {
                             </div>
 
                             <div className="card4">
-                                <h1>Orders</h1>
-                                <p>1881</p>
+                                <h1>Number of Colleges working with</h1>
+                                <p>63</p>
                             </div>
                         </div>
                     </div>

@@ -41,6 +41,7 @@
     "plotly.js": "^1.58.4",
     "react-icons": "^4.1.0",
     "react-plotly.js": "^2.5.1",
+    "react-vis": "^1.11.7",
     "spectre.css": "^0.5.9"
   },
   "devDependencies": {

@@ -60,6 +60,19 @@ const Main = () => {
                             </div>
                             <Chart/>
                         </div>
+
+                        <div className="charts__right">
+                            {/* title of card */}
+                            <div className="charts__right__title">
+                                <div>
+                                    <h1>Trilogy Worth</h1>
+                                    <p>New York City</p>
+                                </div>
+                                <i className="fa fa-usd" aria-hidden="true"/>
+                            </div>
+
+                        </div>
+
                     </div>
 
 

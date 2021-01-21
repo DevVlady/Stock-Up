@@ -94,22 +94,10 @@ const Main = () => {
                                 <h1>Colleges Working With</h1>
                                 <p>63</p>
                             </div>
-
                         </div>
-
                     </div>
-
-
-
                 </div>
-
-
-
             </div>
-
-
         </main>
-
-
     )
 }

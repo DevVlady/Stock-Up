@@ -48,6 +48,22 @@ const Main = () => {
                             <span className="font-bold text-title"></span>
                         </div>
                     </div>
+
+                    <div className="charts">
+                        <div className="charts__left">
+                            <div className="charts__left_title">
+                                <div>
+                                    <h1>Daily Reports</h1>
+                                    <p>Newark, NJ</p>
+                                </div>
+                                <i className="fa fa-usd" aria-hidden="true"></i>
+                            </div>
+                            <Chart/>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
 

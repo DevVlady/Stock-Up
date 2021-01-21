@@ -24,16 +24,15 @@ const Chart = () => {
     ];
     return (
         <div style={{ marginTop: "15px" }}>
-          <XYPlot height={300} width={300}>
-            <VerticalGridLines />
-            <HorizontalGridLines />
-            <XAxis />
-            <YAxis />
-            <LineSeries data={data} color="red" />
-            <LineSeries data={data} color="purple" />
-            <LineSeries data={data} color="yellow" />
-          </XYPlot>
+            <XYPlot height={300} width={300}>
+                <VerticalGridLines />
+                <HorizontalGridLines />
+                <XAxis />
+                <YAxis />
+                <LineSeries data={data} color="red" />
+                <LineSeries data={data} color="purple" />
+                <LineSeries data={data} color="yellow" />
+            </XYPlot>
         </div>
-      );
-    };
+    );
 }

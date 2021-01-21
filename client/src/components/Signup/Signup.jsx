@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Signup.css';
 import axios from 'axios';
+import GoogleBtn from '../Google oAUth Button/GoogleBtn';
 //import GoogleLogin from 'react-google-login';
 // import Facebook from '../FaceBook Button/Facebook';
 // import SignupForm from './components/SignUpForm/Form';
@@ -90,9 +91,10 @@ class SignupForm extends Component {
                 <p className="forgot-password text-right">
                     Already registered? <a href="/login">Sign-In HERE?</a>
                 </p>
-                <a as="a" href={loginPath}> <button
+                {/* <GoogleBtn/> */}
+                {/* <a as="a" href={loginPath}> <button
                     type="button" className="btn btn-gplus btn-danger"> <i className='fab fa-google-plus-g pr-1'>Google</i>
-                    </button></a>
+                    </button></a> */}
                 {/* <GoogleLogin
                 clientId="984123359552-m0q70i6c34gfb986tk9bbvobjh9k8huq.apps.googleusercontent.com"
                 buttonText="Sign-in with Google"

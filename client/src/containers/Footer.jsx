@@ -23,7 +23,7 @@ export function FooterContainer() {
                 <Footer.Column>
                     <Footer.Title>Developers</Footer.Title>
                     <Footer.Link href="https://github.com/Hoybaby">Michael Bartek</Footer.Link>
-                    <Footer.Link href="https://github.com/Vlady14">Vladimir Dimitrov</Footer.Link>
+                    <Footer.Link href="https://github.com/DevVlady">Vladimir Dimitrov</Footer.Link>
                     <Footer.Link href="https://github.com/joshobando">Joshua Obando</Footer.Link>
                 </Footer.Column>
                 <Footer.Column>
